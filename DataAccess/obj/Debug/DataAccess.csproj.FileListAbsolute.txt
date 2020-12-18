@@ -54,3 +54,12 @@ D:\Trabajos\Beta\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 D:\Trabajos\Beta\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 D:\Trabajos\Beta\DataAccess\obj\Debug\DataAccess.dll
 D:\Trabajos\Beta\DataAccess\obj\Debug\DataAccess.pdb
+D:\Trabajos\beta2\DataAccess\bin\Debug\DataAccess.dll
+D:\Trabajos\beta2\DataAccess\bin\Debug\DataAccess.pdb
+D:\Trabajos\beta2\DataAccess\bin\Debug\Common.dll
+D:\Trabajos\beta2\DataAccess\bin\Debug\Common.pdb
+D:\Trabajos\beta2\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+D:\Trabajos\beta2\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\Trabajos\beta2\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+D:\Trabajos\beta2\DataAccess\obj\Debug\DataAccess.dll
+D:\Trabajos\beta2\DataAccess\obj\Debug\DataAccess.pdb

@@ -11,7 +11,7 @@ namespace DataAccess
 {
     class CD_Conexion
     {
-        private SqlConnection Conexion = new SqlConnection("server=KEVIN\\SQLEXPRESS ; database=Trabajos ;  integrated security = true");
+        private SqlConnection Conexion = new SqlConnection("server=DESKTOP-15K1INI\\SQLEXPRESS ; database=Beta ;  integrated security = true");
         public SqlConnection AbrirConexion()
         {
             if (Conexion.State == ConnectionState.Closed)

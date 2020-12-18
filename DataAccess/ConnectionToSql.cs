@@ -12,7 +12,7 @@ namespace DataAccess
         private readonly string connectionString;
         public ConnectionToSql()
         {
-            connectionString = "server=KEVIN\\SQLEXPRESS ; database=Trabajos ;  integrated security = true";
+            connectionString = "server=DESKTOP-15K1INI\\SQLEXPRESS ; database=Beta ;  integrated security = true";
         }
         protected SqlConnection GetConnection()
         {
