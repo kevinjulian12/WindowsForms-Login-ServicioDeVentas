@@ -16,3 +16,9 @@ D:\Trabajos\Beta\Common\obj\Debug\Common.csprojAssemblyReference.cache
 D:\Trabajos\Beta\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 D:\Trabajos\Beta\Common\obj\Debug\Common.dll
 D:\Trabajos\Beta\Common\obj\Debug\Common.pdb
+D:\Trabajos\beta2\Common\bin\Debug\Common.dll
+D:\Trabajos\beta2\Common\bin\Debug\Common.pdb
+D:\Trabajos\beta2\Common\obj\Debug\Common.csprojAssemblyReference.cache
+D:\Trabajos\beta2\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\Trabajos\beta2\Common\obj\Debug\Common.dll
+D:\Trabajos\beta2\Common\obj\Debug\Common.pdb
