@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccess;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace Domain
 {
@@ -38,17 +39,10 @@ namespace Domain
         }
         //Methods
         public string editUserProfile()
-        {
-            try
-            {
+        {                      
                 userDao.editProfile(idUser, loginName, password, firstName, lastName, email);
                 LoginUser(loginName, password);
-                return "Tú perfil ha sido actualizado satisfactoriamente";
-            }
-            catch (Exception ex)
-            {
-                return "El nombre de usuario ya está registrado, pruebe con otro";
-            }
+                return "Tú perfil ha sido actualizado satisfactoriamente";                    
         }
     }
 }

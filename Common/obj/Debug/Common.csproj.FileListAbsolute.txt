@@ -22,3 +22,9 @@ D:\Trabajos\beta2\Common\obj\Debug\Common.csprojAssemblyReference.cache
 D:\Trabajos\beta2\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 D:\Trabajos\beta2\Common\obj\Debug\Common.dll
 D:\Trabajos\beta2\Common\obj\Debug\Common.pdb
+D:\Trabajos\AppCliente-Productos-C#\Common\bin\Debug\Common.dll
+D:\Trabajos\AppCliente-Productos-C#\Common\bin\Debug\Common.pdb
+D:\Trabajos\AppCliente-Productos-C#\Common\obj\Debug\Common.csprojAssemblyReference.cache
+D:\Trabajos\AppCliente-Productos-C#\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\Trabajos\AppCliente-Productos-C#\Common\obj\Debug\Common.dll
+D:\Trabajos\AppCliente-Productos-C#\Common\obj\Debug\Common.pdb

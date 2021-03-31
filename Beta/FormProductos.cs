@@ -30,6 +30,7 @@ namespace Beta
         {
             CN_Productos objeto = new CN_Productos();
             dataGridView1.DataSource = objeto.MostrarProd();
+            dataGridView1.Columns.GetFirstColumn(0).Visible = false;
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -38,13 +39,34 @@ namespace Beta
             {
                 try
                 {
-                    objetoCN.InsertarPRod(txtNombre.Text, txtDesc.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
-                    MessageBox.Show("se inserto correctamente");
-                    MostrarProdctos();
-                    limpiarForm();
-                    textBox1.Enabled = false;
-                    textBox1.Clear();
-                    label6.Visible = true;
+                    if (txtPrecio.TextLength == 0)
+                    {
+                        MessageBox.Show("Ingrese un valor a precio");
+                    }
+                    else
+                    {
+                        if (txtStock.TextLength == 0)
+                        {
+                            MessageBox.Show("Ingrese un valor a stock");
+                        }
+                        else
+                        {
+                            if (txtMarca.TextLength==0 || txtNombre.TextLength==0 || txtDesc.TextLength==0)
+                            {
+                                MessageBox.Show("Complete todos los campos");
+                            }
+                            else
+                            {
+                                objetoCN.InsertarPRod(txtNombre.Text, txtDesc.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
+                                MessageBox.Show("se inserto correctamente");
+                                MostrarProdctos();
+                                limpiarForm();
+                                textBox1.Enabled = false;
+                                textBox1.Clear();
+                                label6.Visible = true;
+                            }
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -56,21 +78,65 @@ namespace Beta
             {
                 try
                 {
-                    objetoCN.EditarProd(txtNombre.Text, txtDesc.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, txtid.Text);
-                    MessageBox.Show("se edito correctamente");
-                    MostrarProdctos();
-                    limpiarForm();
-                    Editar = false;
-                    btnCancelar.Enabled = false;
-                    dataGridView1.Enabled = true;
-                    textBox1.Enabled = false;
-                    textBox1.Clear();
-                    label6.Visible = true;
+                    if (txtPrecio.TextLength == 0)
+                    {
+                        MessageBox.Show("Ingrese un valor a precio");
+                    }
+                    else
+                    {
+                        if (txtStock.TextLength == 0)
+                        {
+                            MessageBox.Show("Ingrese un valor a stock");
+                        }
+                        else
+                        {
+                            if (txtMarca.TextLength == 0 || txtNombre.TextLength == 0 || txtDesc.TextLength == 0)
+                            {
+                                MessageBox.Show("Complete todos los campos");
+                            }
+                            else
+                            {
+                                objetoCN.EditarProd(txtNombre.Text, txtDesc.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, txtid.Text);
+                                MessageBox.Show("se edito correctamente");
+                                MostrarProdctos();
+                                limpiarForm();
+                                Editar = false;
+                                btnCancelar.Enabled = false;
+                                dataGridView1.Enabled = true;
+                                textBox1.Enabled = false;
+                                textBox1.Clear();
+                                label6.Visible = true;
+                            }
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("no se pudo editar los datos por: " + ex);
                 }
+            }
+        }
+        private void txtCaracter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+        private void txtCaracternDecimal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Si deseas, puedes permitir numeros decimales (o float)
+            // If you want, you can allow decimal (float) numbers
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
             }
         }
         private void btnEditar_Click(object sender, EventArgs e)
@@ -98,8 +164,7 @@ namespace Beta
             txtMarca.Text = "";
             txtPrecio.Clear();
             txtStock.Clear();
-            txtNombre.Clear();
-            txtCosto.Clear();
+            txtNombre.Clear();           
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -122,7 +187,7 @@ namespace Beta
 
         private void Activar_Guardar(object sender, EventArgs e)
         {
-            if (txtDesc.Text == "" && txtMarca.Text == "" && txtNombre.Text == "" && txtPrecio.Text == "" && txtStock.Text == "" && txtCosto.Text=="")
+            if (txtDesc.Text == "" && txtMarca.Text == "" && txtNombre.Text == "" && txtPrecio.Text == "" && txtStock.Text == "")
             {
                 btnGuardar.Enabled = false;
             }

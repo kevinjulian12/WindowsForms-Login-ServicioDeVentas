@@ -19,7 +19,6 @@ namespace DataAccess
 
         public DataTable Mostrar()
         {
-
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "MostrarClientes";
             comando.CommandType = CommandType.StoredProcedure;

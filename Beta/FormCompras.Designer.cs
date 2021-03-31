@@ -542,6 +542,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -579,6 +581,7 @@
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridView1.Location = new System.Drawing.Point(12, 262);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
@@ -595,42 +598,49 @@
             // 
             this.ColumnID.HeaderText = "ID";
             this.ColumnID.Name = "ColumnID";
+            this.ColumnID.ReadOnly = true;
             this.ColumnID.Width = 43;
             // 
             // Categoria
             // 
             this.Categoria.HeaderText = "Categoria";
             this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
             this.Categoria.Width = 84;
             // 
             // Descripcion
             // 
             this.Descripcion.HeaderText = "Descripcion";
             this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
             this.Descripcion.Width = 96;
             // 
             // Marca
             // 
             this.Marca.HeaderText = "Marca";
             this.Marca.Name = "Marca";
+            this.Marca.ReadOnly = true;
             this.Marca.Width = 66;
             // 
             // ColumnCant
             // 
             this.ColumnCant.HeaderText = "Cantidad";
             this.ColumnCant.Name = "ColumnCant";
+            this.ColumnCant.ReadOnly = true;
             this.ColumnCant.Width = 80;
             // 
             // ColumnPrec
             // 
             this.ColumnPrec.HeaderText = "Precio de Compra";
             this.ColumnPrec.Name = "ColumnPrec";
+            this.ColumnPrec.ReadOnly = true;
             this.ColumnPrec.Width = 130;
             // 
             // ColumnTotal
             // 
             this.ColumnTotal.HeaderText = "Total";
             this.ColumnTotal.Name = "ColumnTotal";
+            this.ColumnTotal.ReadOnly = true;
             this.ColumnTotal.Width = 58;
             // 
             // btnNuevo

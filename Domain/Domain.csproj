@@ -44,6 +44,8 @@
     <Compile Include="CN_Clientes.cs" />
     <Compile Include="CN_Productos.cs" />
     <Compile Include="CN_Proveedor.cs" />
+    <Compile Include="CN_Ventas.cs" />
+    <Compile Include="CN_VentasItem.cs" />
     <Compile Include="UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -29,6 +29,7 @@ namespace Beta
         {
             CN_Proveedor objeto = new CN_Proveedor();
             dataGridView1.DataSource = objeto.MostrarProv();
+            dataGridView1.Columns.GetFirstColumn(0).Visible = false;
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -37,13 +38,20 @@ namespace Beta
             {
                 try
                 {
-                    objetoCN.InsertarPRov(txtnombre.Text, txtRazonSocial.Text, txtDireccion.Text, txtTelefono.Text, txtReferencia.Text, txtEmail.Text);
-                    MessageBox.Show("se inserto correctamente");
-                    MostrarProveedor();
-                    limpiarForm();
-                    textBox1.Enabled = false;
-                    textBox1.Clear();
-                    label6.Visible = true;
+                    if (txtDireccion.TextLength < 3 ||txtEmail.TextLength < 3 || txtnombre.TextLength < 3 || txtRazonSocial.TextLength < 3 || txtTelefono.TextLength < 6 || txtReferencia.TextLength < 3)
+                    {
+                        MessageBox.Show("Complete todos los campos, deben tener como minimo 3 caracter y telefono minimo de 6 caracter");
+                    }
+                    else
+                    {
+                        objetoCN.InsertarPRov(txtnombre.Text, txtRazonSocial.Text, txtDireccion.Text, txtTelefono.Text, txtReferencia.Text, txtEmail.Text);
+                        MessageBox.Show("se inserto correctamente");
+                        MostrarProveedor();
+                        limpiarForm();
+                        textBox1.Enabled = false;
+                        textBox1.Clear();
+                        label6.Visible = true;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -55,21 +63,37 @@ namespace Beta
             {
                 try
                 {
-                    objetoCN.EditarProv(txtid.Text,txtnombre.Text, txtRazonSocial.Text, txtDireccion.Text, txtTelefono.Text, txtReferencia.Text, txtEmail.Text);
-                    MessageBox.Show("se edito correctamente");
-                    MostrarProveedor();
-                    limpiarForm();
-                    Editar = false;
-                    btnCancelar.Enabled = false;
-                    dataGridView1.Enabled = true;
-                    textBox1.Enabled = false;
-                    textBox1.Clear();
-                    label6.Visible = true;
+                    if (txtDireccion.TextLength < 3 || txtEmail.TextLength < 3 || txtnombre.TextLength < 3 || txtRazonSocial.TextLength < 3 || txtTelefono.TextLength < 6 || txtReferencia.TextLength < 3)
+                    {
+                        MessageBox.Show("Complete todos los campos, deben tener como minimo 3 caracter y telefono minimo de 6 caracter");
+                    }
+                    else
+                    {
+                        objetoCN.EditarProv(txtid.Text, txtnombre.Text, txtRazonSocial.Text, txtDireccion.Text, txtTelefono.Text, txtReferencia.Text, txtEmail.Text);
+                        MessageBox.Show("se edito correctamente");
+                        MostrarProveedor();
+                        limpiarForm();
+                        Editar = false;
+                        btnCancelar.Enabled = false;
+                        dataGridView1.Enabled = true;
+                        textBox1.Enabled = false;
+                        textBox1.Clear();
+                        label6.Visible = true;
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("no se pudo editar los datos por: " + ex);
                 }
+            }
+        }
+        private void txtCaracter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
             }
         }
         private void btnEditar_Click(object sender, EventArgs e)

@@ -17,9 +17,8 @@ namespace Beta
         }
         public void Formulario_Load(object sender, EventArgs e)
         {
-            LoadUserData();
+            LoadUserData();           
             privilegio();
-            
         }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -115,7 +114,7 @@ namespace Beta
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            FormListasClientes flc = new FormListasClientes();
+            FormClientes flc = new FormClientes();
             openChildFormInPanel(flc);
             label4.Text = "Clientes";
         }
@@ -244,13 +243,14 @@ namespace Beta
             openChildFormInPanel(pagos);
             label4.Text = "Pagos";
         }
-
+  
         public void LoadUserData()
         {
             lblUsername.Text = UserCache.LoginName;
             lblPosition.Text = UserCache.Position;
             lblEmail.Text = UserCache.Email;
         }
+
         private void privilegio()
         {
             if(lblPosition.Text != "Administrator") {

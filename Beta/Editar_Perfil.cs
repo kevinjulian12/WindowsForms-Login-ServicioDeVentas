@@ -22,7 +22,6 @@ namespace Beta
         {
             loadUserData();
             initializePassEditControls();
-
         }
         private void loadUserData()
         {
@@ -40,6 +39,7 @@ namespace Beta
             txtPassword.Text = UserCache.Password;
             txtConfirmPass.Text = UserCache.Password;
             txtCurrentPassword.Text = "";
+           
         }
         private void initializePassEditControls()
         {
@@ -91,14 +91,13 @@ namespace Beta
                             firstName: txtFirstName.Text,
                             lastName: txtLastName.Text,
                             position: null,
-                            email: txtEmail.Text);
-                        Formulario formulario = new Formulario();
-                        formulario.LoadUserData();
+                            email: txtEmail.Text);                                              
                         var result = userModel.editUserProfile();
                         MessageBox.Show(result);
-                        reset();
-                        
+                        reset();                        
                         panel1.Visible = false;
+                        Formulario f = new Formulario();
+                        f.LoadUserData();
                     }
                     else
                         MessageBox.Show("Contraseña actual incorrecta, inténtelo de nuevo");

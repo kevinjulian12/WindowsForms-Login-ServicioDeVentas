@@ -48,6 +48,8 @@
     <Compile Include="CD_Conexion.cs" />
     <Compile Include="CD_Productos.cs" />
     <Compile Include="CD_Proveedor.cs" />
+    <Compile Include="CD_Ventas.cs" />
+    <Compile Include="CD_VentasItems.cs" />
     <Compile Include="ConnectionToMySql.cs" />
     <Compile Include="ConnectionToSql.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
