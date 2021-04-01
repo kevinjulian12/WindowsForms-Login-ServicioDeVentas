@@ -186,3 +186,4 @@ D:\Trabajos\AppCliente-Productos-C#\Beta\obj\Debug\Beta.exe
 D:\Trabajos\AppCliente-Productos-C#\Beta\obj\Debug\Beta.pdb
 D:\Trabajos\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormClientes.resources
 D:\Trabajos\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormDetalleVenta.resources
+D:\Trabajos\AppCliente-Productos-C#\Beta\obj\Debug\Beta.ListaDeClientes.resources

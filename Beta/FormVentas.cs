@@ -88,5 +88,16 @@ namespace Beta
             dataGridView1.Rows.Add(txtIDP.Text, textBox1.Text, txtPrecio.Text, txtCantidad.Text, Convert.ToSingle(txtPrecio.Text)* Convert.ToInt32(txtCantidad.Text));
             labelTotal.Text = Sumar();
         }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+            ListaDeClientes listaDeClientes = new ListaDeClientes();
+            listaDeClientes.ShowDialog();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

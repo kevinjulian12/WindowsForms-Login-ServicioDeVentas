@@ -96,7 +96,7 @@ namespace Beta
                         MessageBox.Show(result);
                         reset();                        
                         panel1.Visible = false;
-                        Formulario f = new Formulario();
+                        Formulario f = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
                         f.LoadUserData();
                     }
                     else
