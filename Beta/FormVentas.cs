@@ -18,6 +18,7 @@ namespace Beta
         public FormVentas()
         {
             InitializeComponent();
+            dataGridView1.Columns[0].Visible = false;
         }
 
         CN_Ventas ventas = new CN_Ventas();
@@ -60,23 +61,21 @@ namespace Beta
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
-            labelTotal.Text = Sumar();
+            Sumar();
                     }
             else
                 MessageBox.Show("seleccione una fila por favor");
         
         }
         
-        public string Sumar()
+        public void Sumar()
         {
-            const int columna = 4;
-
-            int suma = 0;
+            float total = 0;
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                suma += (int)row.Cells[columna].Value;
+                total += (float)row.Cells[4].Value;
             }
-            return Convert.ToString(suma);
+            labelTotal.Text = Convert.ToString(total);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -86,7 +85,7 @@ namespace Beta
                     }
         else
             dataGridView1.Rows.Add(txtIDP.Text, textBox1.Text, txtPrecio.Text, txtCantidad.Text, Convert.ToSingle(txtPrecio.Text)* Convert.ToInt32(txtCantidad.Text));
-            labelTotal.Text = Sumar();
+            Sumar();
         }
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
@@ -95,9 +94,10 @@ namespace Beta
             listaDeClientes.ShowDialog();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            ListaDeProductos listaDeProductos = new ListaDeProductos();
+            listaDeProductos.ShowDialog();
         }
     }
 }
