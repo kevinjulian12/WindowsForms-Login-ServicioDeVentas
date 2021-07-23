@@ -1,8 +1,7 @@
-﻿using System;
+﻿using Domain;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Domain;
-using Common.Cache;
 
 namespace Beta
 {
@@ -16,18 +15,23 @@ namespace Beta
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Entrar();
+        }
+
+        private void Entrar()
+        {
             EncryptHelper encryptHelper = new EncryptHelper();
 
-            if ( txtUsername.Text != "Username" && txtUsername.TextLength > 2)
+            if (txtUsername.Text != "Username" && txtUsername.TextLength > 2)
             {
-                if (encryptHelper.Sha256Encrypt (txtPassword.Text) != "Password")
+                if (encryptHelper.Sha256Encrypt(txtPassword.Text) != "Password")
                 {
                     UserModel user = new UserModel();
                     var validLogin = user.LoginUser(txtUsername.Text, txtPassword.Text);
                     if (validLogin == true)
                     {
                         Formulario mainMenu = new Formulario();
-                       // MessageBox.Show("Bienvenido " + UserCache.FirstName + ", " + UserCache.LastName);
+                        // MessageBox.Show("Bienvenido " + UserCache.FirstName + ", " + UserCache.LastName);
                         mainMenu.Show();
                         mainMenu.FormClosed += Logout;
                         this.Hide();
@@ -44,11 +48,13 @@ namespace Beta
             }
             else msgError("Por favor ingrese nombre de usuario.");
         }
+
         private void msgError(string msg)
         {
             lblErrorMessage.Text = "    " + msg;
             lblErrorMessage.Visible = true;
         }
+
         private void Logout(object sender, FormClosedEventArgs e)
         {
             txtPassword.Text = "";
@@ -57,7 +63,7 @@ namespace Beta
             lblErrorMessage.Visible = false;
             this.Show();
         }
-    
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -85,7 +91,13 @@ namespace Beta
 
             }
         }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                Entrar();
+            }
+        }
     }
 }
-
-
