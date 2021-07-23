@@ -28,3 +28,9 @@ D:\Trabajos\AppCliente-Productos-C#\Common\obj\Debug\Common.csprojAssemblyRefere
 D:\Trabajos\AppCliente-Productos-C#\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 D:\Trabajos\AppCliente-Productos-C#\Common\obj\Debug\Common.dll
 D:\Trabajos\AppCliente-Productos-C#\Common\obj\Debug\Common.pdb
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\Common\bin\Debug\Common.dll
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\Common\bin\Debug\Common.pdb
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\Common\obj\Debug\Common.csprojAssemblyReference.cache
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\Common\obj\Debug\Common.dll
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\Common\obj\Debug\Common.pdb

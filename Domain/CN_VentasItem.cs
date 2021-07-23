@@ -15,14 +15,14 @@ namespace Domain
 
         public int idVenta { get; set; }
 
-        public void Eliminar()
+        public void Eliminar(int idVenta)
         {
             VentasItems.EliminarDetalllesVenta(idVenta);  
         }
 
-        public DataTable MostrarVentaItem()
+        public DataTable MostrarVentaItem(int idventa)
         {
-           return VentasItems.MostrarDetVent(idVenta);
+           return VentasItems.MostrarDetVent(idventa);
         }
 
         public void InsertarItems(int idVenta,int idproducto,float precioUnitario,int cantidad,float precioTotal)

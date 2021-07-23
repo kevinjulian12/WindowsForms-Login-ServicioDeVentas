@@ -14,7 +14,7 @@ namespace Domain
         public int IDCliente { get; set; }
         public int idVenta { get; set; }
 
-        public DataTable MostraHistVent()
+        public DataTable MostraHistVent(int IDCliente)
         {
             return Ventas.MostrarHistVent(IDCliente);
         }
@@ -29,7 +29,7 @@ namespace Domain
         }
    
         
-        public void Eliminar()
+        public void Eliminar(int idVenta)
         {
             Ventas.EliminarHist(idVenta);
         }

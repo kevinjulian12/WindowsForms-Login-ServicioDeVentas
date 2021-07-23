@@ -72,3 +72,12 @@ D:\Trabajos\AppCliente-Productos-C#\DataAccess\obj\Debug\DataAccess.csproj.CoreC
 D:\Trabajos\AppCliente-Productos-C#\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 D:\Trabajos\AppCliente-Productos-C#\DataAccess\obj\Debug\DataAccess.dll
 D:\Trabajos\AppCliente-Productos-C#\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\DataAccess\bin\Debug\Common.dll
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\DataAccess\bin\Debug\Common.pdb
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\kevin\OneDrive\Trabajos\AppCliente-Productos-C#\DataAccess\obj\Debug\DataAccess.pdb

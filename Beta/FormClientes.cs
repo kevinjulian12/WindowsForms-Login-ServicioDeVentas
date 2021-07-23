@@ -241,8 +241,7 @@ namespace Beta
         private void btnHistorial_Click(object sender, EventArgs e)
         {
             HistorialDeComprasClientes historial = new HistorialDeComprasClientes();
-            CN_Ventas ventas = new CN_Ventas();
-            ventas.IDCliente = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            historial.id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value);
             historial.ShowDialog();
         }
     }

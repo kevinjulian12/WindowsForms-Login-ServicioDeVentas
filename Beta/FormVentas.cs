@@ -40,7 +40,7 @@ namespace Beta
             }
             else {
                 DateTime hora = DateTime.Today;
-                float total = Convert.ToSingle(labelTotal.Text);
+                float total = Convert.ToSingle(labelTotal.Text); 
                 var idVenta = ventas.InsertarVenta(Convert.ToInt32(txtIDC.Text), hora, total);
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {

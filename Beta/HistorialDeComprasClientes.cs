@@ -19,10 +19,11 @@ namespace Beta
         }
         CN_Ventas ventas = new CN_Ventas();
         CN_VentasItem VentasItem = new CN_VentasItem();
-
+        
+        public int id { get; set; }
         public void mostrar()
         {
-            dataGridView1.DataSource = ventas.MostraHistVent();
+            dataGridView1.DataSource = ventas.MostraHistVent(id);
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].Visible = false;
         }
@@ -61,15 +62,16 @@ namespace Beta
             {
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    ventas.idVenta = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-                    VentasItem.idVenta = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-                    VentasItem.Eliminar();
-                    ventas.Eliminar();
+                    int ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value);
+                    VentasItem.Eliminar(ID);
+                    ventas.Eliminar(ID);
                     MessageBox.Show("Eliminado correctamente");
                     mostrar();
                 }
                 else
+                {
                     MessageBox.Show("seleccione una fila por favor");
+                }
             }
             catch (Exception)
             {
@@ -84,7 +86,7 @@ namespace Beta
             {
                 if (dataGridView1.SelectedRows.Count > 0) {
                     FormDetalleVenta formDetalleVenta = new FormDetalleVenta();
-                    VentasItem.idVenta = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                    formDetalleVenta.ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
                     formDetalleVenta.ShowDialog();
                 }
                 else
@@ -95,6 +97,11 @@ namespace Beta
 
                 MessageBox.Show("No hay un registro seleccionado");
             }
+        }
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            btnHistorial.Enabled = true;
+            btnEliminar.Enabled = true;
         }
     }
 }

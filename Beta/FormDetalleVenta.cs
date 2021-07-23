@@ -19,13 +19,11 @@ namespace Beta
         }
 
         CN_VentasItem VentasItem = new CN_VentasItem();
-
+        public int ID { get; set; }
         public void mostrar()
         {
-            dataGridView1.DataSource = VentasItem.MostrarVentaItem();
-          
+            dataGridView1.DataSource = VentasItem.MostrarVentaItem(ID);
         }
-
         string NombreColumna = "";
         private void FiltrarDatosDatagridview(DataGridView datagrid, string nombre_columna, TextBox txt_buscar)
         {
