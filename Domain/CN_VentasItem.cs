@@ -15,9 +15,9 @@ namespace Domain
 
         public int idVenta { get; set; }
 
-        public void Eliminar(int idVenta)
+        public void Eliminar(int idventa)
         {
-            VentasItems.EliminarDetalllesVenta(idVenta);  
+            VentasItems.EliminarDetalllesVenta(idventa);  
         }
 
         public DataTable MostrarVentaItem(int idventa)

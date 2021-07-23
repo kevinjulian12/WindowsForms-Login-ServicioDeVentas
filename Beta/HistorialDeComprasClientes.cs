@@ -58,25 +58,26 @@ namespace Beta
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
                     int ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value);
                     VentasItem.Eliminar(ID);
                     ventas.Eliminar(ID);
-                    MessageBox.Show("Eliminado correctamente");
                     mostrar();
+                    MessageBox.Show("Eliminado correctamente");
+                    
                 }
                 else
                 {
                     MessageBox.Show("seleccione una fila por favor");
                 }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("No hay un registro seleccionado");
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("No hay un registro seleccionado");
+            //}
 
         }
 
@@ -95,7 +96,7 @@ namespace Beta
             //catch (Exception)
             //{
 
-                MessageBox.Show("No hay un registro seleccionado");
+               // MessageBox.Show("No hay un registro seleccionado");
             //}
         }
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)

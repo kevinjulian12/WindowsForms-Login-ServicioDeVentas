@@ -39,7 +39,8 @@ namespace DataAccess
 
         public object Insertar(int Idcliente,DateTime fecha,float total) {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into ventas values (" + Idcliente + ",'" + fecha.ToString("dd/MM/yyyy") +"'," + total.ToString() + "); SELECT SCOPE_IDENTITY();";
+            string total1 = total.ToString().Replace(',', '.');
+            comando.CommandText = "insert into ventas values (" + Idcliente + ",'" + fecha.ToString("dd/MM/yyyy") +"'," + total1 + "); SELECT SCOPE_IDENTITY();";
             comando.CommandType = CommandType.Text;
             object IdVenta;
             IdVenta = comando.ExecuteScalar();

@@ -29,7 +29,9 @@ namespace DataAccess
         public void Insertar(int IDVenta,int IDProducto,float PrecioUnitario,int Cantidad,float PrecioTotal)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into ventasitems values (" + IDVenta.ToString() + "," + IDProducto + "," + PrecioUnitario + "," + Cantidad + "," + PrecioTotal + ");";
+            string total1 = PrecioTotal.ToString().Replace(',', '.');
+            string precio1 = PrecioUnitario.ToString().Replace(',', '.');
+            comando.CommandText = "insert into ventasitems values (" + IDVenta.ToString() + "," + IDProducto + "," + precio1 + "," + Cantidad + "," + total1 + ");";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
@@ -39,7 +41,7 @@ namespace DataAccess
         public void EliminarDetalllesVenta(int Id)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "delete from ventas where IDVenta=" + Id;
+            comando.CommandText = "delete from ventasitems where IDVenta=" + Id;
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
