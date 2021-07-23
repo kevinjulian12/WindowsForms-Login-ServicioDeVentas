@@ -52,7 +52,7 @@
             legend1.Name = "Legend1";
             legend1.TitleBackColor = System.Drawing.Color.Black;
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(390, 239);
+            this.chart1.Location = new System.Drawing.Point(22, 12);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.BorderColor = System.Drawing.Color.Black;

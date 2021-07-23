@@ -82,8 +82,8 @@ namespace Beta
 
         private void btnHistorial_Click(object sender, EventArgs e)
         {
-            try
-            {
+           // try
+           // {
                 if (dataGridView1.SelectedRows.Count > 0) {
                     FormDetalleVenta formDetalleVenta = new FormDetalleVenta();
                     formDetalleVenta.ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
@@ -91,12 +91,12 @@ namespace Beta
                 }
                 else
                     MessageBox.Show("Por favor seleccione una fila...");
-            }
-            catch (Exception)
-            {
+            //}
+            //catch (Exception)
+            //{
 
                 MessageBox.Show("No hay un registro seleccionado");
-            }
+            //}
         }
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
