@@ -23,6 +23,8 @@ namespace Beta
 
         CN_Ventas ventas = new CN_Ventas();
         CN_VentasItem ventasItem = new CN_VentasItem();
+        public string IDcliente;
+        public string iDproducto;
         private void txtCaracter_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
@@ -35,13 +37,13 @@ namespace Beta
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtIDC.Text == "") {
+            if (IDcliente == null) {
                 MessageBox.Show("seleccionar un cliente");
             }
             else {
                 DateTime hora = DateTime.Today;
                 float total = Convert.ToSingle(labelTotal.Text); 
-                var idVenta = ventas.InsertarVenta(Convert.ToInt32(txtIDC.Text), hora, total);
+                var idVenta = ventas.InsertarVenta(Convert.ToInt32(IDcliente), hora, total);
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     if (row.Cells[0].Value != null) {
@@ -84,7 +86,7 @@ namespace Beta
                 MessageBox.Show("Complete todos los textos, por favor");
                     }
         else
-            dataGridView1.Rows.Add(txtIDP.Text, textBox1.Text, txtPrecio.Text, txtCantidad.Text, Convert.ToSingle(txtPrecio.Text)* Convert.ToInt32(txtCantidad.Text));
+            dataGridView1.Rows.Add(iDproducto, textBox1.Text, txtPrecio.Text, txtCantidad.Text, Convert.ToSingle(txtPrecio.Text)* Convert.ToInt32(txtCantidad.Text));
             Sumar();
         }
 

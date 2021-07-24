@@ -47,7 +47,6 @@
             this.txtapellido = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -329,17 +328,6 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Nombres:";
             // 
-            // txtid
-            // 
-            this.txtid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtid.Location = new System.Drawing.Point(149, 233);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(571, 23);
-            this.txtid.TabIndex = 23;
-            this.txtid.Visible = false;
-            // 
             // textBox1
             // 
             this.textBox1.Enabled = false;
@@ -403,7 +391,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtid);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormClientes";
@@ -434,7 +421,6 @@
         private System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.TextBox txtLocalidad;
         private System.Windows.Forms.Label label14;
-        public System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;

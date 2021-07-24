@@ -82,15 +82,7 @@ namespace Beta
                 txtUsername.ForeColor = Color.LightGray;
             }
         }
-        private void txtUsername_Leave(object sender, EventArgs e)
-        {
-            if (txtUsername.Text == "")
-            {
-                txtUsername.Text = "Usuario";
-                txtUsername.ForeColor = Color.Silver;
-
-            }
-        }
+      
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -99,5 +91,6 @@ namespace Beta
                 Entrar();
             }
         }
+        
     }
 }

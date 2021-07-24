@@ -37,7 +37,7 @@ namespace DataAccess
             comando.Parameters.AddWithValue("@descrip", desc);
             comando.Parameters.AddWithValue("@Marca", marca);
             comando.Parameters.AddWithValue("@precio", precio);
-            comando.Parameters.AddWithValue("@stock", precio);
+            comando.Parameters.AddWithValue("@stock", stock);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();
@@ -52,7 +52,7 @@ namespace DataAccess
             comando.Parameters.AddWithValue("@descrip", desc);
             comando.Parameters.AddWithValue("@Marca", marca);
             comando.Parameters.AddWithValue("@precio", precio);
-            comando.Parameters.AddWithValue("@stock", precio);
+            comando.Parameters.AddWithValue("@stock", stock);
             comando.Parameters.AddWithValue("@id", id);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();

@@ -16,6 +16,7 @@ namespace Beta
         public bool Editar = false;
         private CN_Clientes objetoCN = new CN_Clientes();
         private string idCliente = null;
+        private string id;
         
         public FormClientes()
         {
@@ -73,7 +74,7 @@ namespace Beta
                     }
                     else
                     {
-                        objetoCN.EditarClien(txtid.Text, txtnombre.Text, txtapellido.Text, txtdireccion.Text, txttelefono.Text, txtLocalidad.Text);
+                        objetoCN.EditarClien(id, txtnombre.Text, txtapellido.Text, txtdireccion.Text, txttelefono.Text, txtLocalidad.Text);
                         MessageBox.Show("se edito correctamente");
                         MostrarClientes();
                         limpiarForm();
@@ -122,7 +123,7 @@ namespace Beta
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 Editar = true;
-                txtid.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+                id = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
                 txtnombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
                 txtapellido.Text = dataGridView1.CurrentRow.Cells["Apellido"].Value.ToString();
                 txtdireccion.Text = dataGridView1.CurrentRow.Cells["Direccion"].Value.ToString();

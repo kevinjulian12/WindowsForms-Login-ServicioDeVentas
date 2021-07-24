@@ -47,7 +47,6 @@
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -329,17 +328,6 @@
             this.label2.TabIndex = 35;
             this.label2.Text = "Nombres:";
             // 
-            // txtid
-            // 
-            this.txtid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtid.Location = new System.Drawing.Point(252, 197);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(571, 23);
-            this.txtid.TabIndex = 19;
-            this.txtid.Visible = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -382,7 +370,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtid);
             this.Name = "FormProductos";
             this.Text = "FormProductos";
             this.Load += new System.EventHandler(this.FormProductos_Load);
@@ -398,7 +385,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox1;

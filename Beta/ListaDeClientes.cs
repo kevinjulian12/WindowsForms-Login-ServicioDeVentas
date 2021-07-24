@@ -59,7 +59,7 @@ namespace Beta
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 FormVentas ventas = Application.OpenForms.OfType<FormVentas>().SingleOrDefault();
-                ventas.txtIDC.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+                ventas.IDcliente = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
                 ventas.txtNombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
                 ventas.txtApellido.Text = dataGridView1.CurrentRow.Cells["Apellido"].Value.ToString();
                 ventas.txtDireccion.Text = dataGridView1.CurrentRow.Cells["Direccion"].Value.ToString();

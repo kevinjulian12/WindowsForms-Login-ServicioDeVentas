@@ -17,6 +17,7 @@ namespace Beta
         CN_Productos objetoCN = new CN_Productos();
         private string idProducto = null;
         private bool Editar = false;
+        private string id;
         public FormProductos()
         {
             InitializeComponent();
@@ -96,7 +97,7 @@ namespace Beta
                             }
                             else
                             {
-                                objetoCN.EditarProd(txtNombre.Text, txtDesc.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, txtid.Text);
+                                objetoCN.EditarProd(txtNombre.Text, txtDesc.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, id);
                                 MessageBox.Show("se edito correctamente");
                                 MostrarProdctos();
                                 limpiarForm();
@@ -149,7 +150,7 @@ namespace Beta
                 txtDesc.Text = dataGridView1.CurrentRow.Cells["Descripcion"].Value.ToString();
                 txtPrecio.Text = dataGridView1.CurrentRow.Cells["Precio"].Value.ToString();
                 txtStock.Text = dataGridView1.CurrentRow.Cells["Stock"].Value.ToString();
-                txtid.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                id = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                 btnEditar.Enabled = false;
                 btnEliminar.Enabled = false;
                 dataGridView1.Enabled = false;
