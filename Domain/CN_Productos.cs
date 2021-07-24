@@ -29,5 +29,14 @@ namespace Domain
         {
             objetoCD.Eliminar(Convert.ToInt32(id));
         }
+        public void RestarStock(int id, int cantidad)
+        {
+            objetoCD.RestaStock(Convert.ToInt32(id), Convert.ToInt32(cantidad));
+        }
+        public object consultarStock(int id)
+        {
+            return objetoCD.consultarStock(id);
+        }
+
     }
 }

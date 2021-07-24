@@ -48,7 +48,6 @@
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -306,18 +305,6 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Nombres:";
             // 
-            // txtid
-            // 
-            this.txtid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtid.Enabled = false;
-            this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtid.Location = new System.Drawing.Point(254, 223);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(571, 23);
-            this.txtid.TabIndex = 19;
-            this.txtid.Visible = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -432,7 +419,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtid);
             this.Name = "FormProveedores";
             this.Text = "FormProveedores";
             this.Load += new System.EventHandler(this.FormProductos_Load);
@@ -455,7 +441,6 @@
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox txtTelefono;
         public System.Windows.Forms.TextBox txtDireccion;
-        public System.Windows.Forms.TextBox txtid;
         public System.Windows.Forms.TextBox txtnombre;
         public System.Windows.Forms.TextBox txtRazonSocial;
         private System.Windows.Forms.Label label1;

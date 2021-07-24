@@ -15,6 +15,7 @@ namespace Beta
     {
         CN_Proveedor objetoCN = new CN_Proveedor();
         private string idProveedor = null;
+        private string id;
         private bool Editar = false;
         public FormProveedores()
         {
@@ -69,7 +70,7 @@ namespace Beta
                     }
                     else
                     {
-                        objetoCN.EditarProv(txtid.Text, txtnombre.Text, txtRazonSocial.Text, txtDireccion.Text, txtTelefono.Text, txtReferencia.Text, txtEmail.Text);
+                        objetoCN.EditarProv(id, txtnombre.Text, txtRazonSocial.Text, txtDireccion.Text, txtTelefono.Text, txtReferencia.Text, txtEmail.Text);
                         MessageBox.Show("se edito correctamente");
                         MostrarProveedor();
                         limpiarForm();
@@ -107,7 +108,7 @@ namespace Beta
                 txtTelefono.Text = dataGridView1.CurrentRow.Cells["Telefono"].Value.ToString();
                 txtReferencia.Text = dataGridView1.CurrentRow.Cells["Referencia"].Value.ToString();
                 txtEmail.Text = dataGridView1.CurrentRow.Cells["Email"].Value.ToString();
-                txtid.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+                id = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
                 btnEditar.Enabled = false;
                 btnEliminar.Enabled = false;
                 dataGridView1.Enabled = false;

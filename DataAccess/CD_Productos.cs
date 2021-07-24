@@ -69,5 +69,29 @@ namespace DataAccess
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
+
+        public void RestaStock(int id, int cantidad)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "RestarStock";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@idpro", id);
+            comando.Parameters.AddWithValue("@cant", cantidad);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+        }
+
+        public object consultarStock(int id)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select Stock from Productos where Id=" + id;
+            comando.CommandType = CommandType.Text;
+            object stock;
+            stock = comando.ExecuteScalar();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+            return stock;
+        }
     }
 }

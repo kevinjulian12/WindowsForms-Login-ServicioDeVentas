@@ -20,11 +20,11 @@ namespace Beta
         private void btnNuevoProv_Click(object sender, EventArgs e)
         {
             txtNombre.Enabled = true;
-            txtDireccion.Enabled = true;
+            
             txtEmail.Enabled = true;
             txtRazon_Soccial.Enabled = true;
             txtTelefono.Enabled = true;
-            txtReferencia.Enabled = true;
+           
         }
 
         private void btnNuevoArt_Click(object sender, EventArgs e)

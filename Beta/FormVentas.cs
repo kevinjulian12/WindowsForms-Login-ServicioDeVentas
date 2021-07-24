@@ -23,6 +23,7 @@ namespace Beta
 
         CN_Ventas ventas = new CN_Ventas();
         CN_VentasItem ventasItem = new CN_VentasItem();
+        CN_Productos Productos = new CN_Productos();
         public string IDcliente;
         public string iDproducto;
         private void txtCaracter_KeyPress(object sender, KeyPressEventArgs e)
@@ -52,8 +53,11 @@ namespace Beta
                                              Convert.ToSingle(row.Cells[2].Value),
                                              Convert.ToInt32(row.Cells[3].Value),
                                              Convert.ToSingle(row.Cells[4].Value));
+                        Productos.RestarStock(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(row.Cells[3].Value));
                     }
                 }
+                dataGridView1.DataSource = "";
+                limpiarFormCliente();
                 MessageBox.Show("se inserto correctamente");
             }
         }
@@ -82,12 +86,41 @@ namespace Beta
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (txtCantidad.Text == "") {
+            var stock = Productos.consultarStock(Convert.ToInt32(iDproducto));
+            if (txtCantidad.Text == "")
+            {
                 MessageBox.Show("Complete todos los textos, por favor");
-                    }
-        else
-            dataGridView1.Rows.Add(iDproducto, textBox1.Text, txtPrecio.Text, txtCantidad.Text, Convert.ToSingle(txtPrecio.Text)* Convert.ToInt32(txtCantidad.Text));
-            Sumar();
+            }
+            else
+            {
+                //object stock = Productos.consultarStock(Convert.ToInt32(iDproducto))
+                if (Convert.ToInt32(stock) >= Convert.ToInt32(txtCantidad.Text))
+                {
+                    dataGridView1.Rows.Add(iDproducto, textBox1.Text, txtPrecio.Text, txtCantidad.Text, Convert.ToSingle(txtPrecio.Text) * Convert.ToInt32(txtCantidad.Text));
+                    Sumar();
+                    limpiarFormProducto();
+                }
+                else
+                {
+                    MessageBox.Show("No hay stock");
+                }
+            }
+        }
+
+        private void limpiarFormProducto()
+        {
+            txtMarca.Clear();
+            textBox1.Clear();
+            txtCantidad.Clear();
+            txtPrecio.Clear();
+        }
+
+        private void limpiarFormCliente()
+        {
+            IDcliente = null;
+            txtNombre.Clear();
+            txtDireccion.Clear();
+            txtApellido.Clear();
         }
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
