@@ -57,7 +57,8 @@
             this.labelTotal = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPrec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -389,9 +390,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(784, 284);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 20);
+            this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 42;
-            this.label1.Text = "Precio Total";
+            this.label1.Text = "Total Neto";
             // 
             // labelTotal
             // 
@@ -428,7 +429,8 @@
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnID,
-            this.Descripcion,
+            this.Nombre,
+            this.Marca,
             this.ColumnPrec,
             this.ColumnCant,
             this.ColumnTotal});
@@ -464,19 +466,26 @@
             this.ColumnID.ReadOnly = true;
             this.ColumnID.Width = 43;
             // 
-            // Descripcion
+            // Nombre
             // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 96;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 76;
+            // 
+            // Marca
+            // 
+            this.Marca.HeaderText = "Marca";
+            this.Marca.Name = "Marca";
+            this.Marca.ReadOnly = true;
+            this.Marca.Width = 66;
             // 
             // ColumnPrec
             // 
-            this.ColumnPrec.HeaderText = "Precio de Venta";
+            this.ColumnPrec.HeaderText = "Precio";
             this.ColumnPrec.Name = "ColumnPrec";
             this.ColumnPrec.ReadOnly = true;
-            this.ColumnPrec.Width = 117;
+            this.ColumnPrec.Width = 66;
             // 
             // ColumnCant
             // 
@@ -487,10 +496,10 @@
             // 
             // ColumnTotal
             // 
-            this.ColumnTotal.HeaderText = "Total";
+            this.ColumnTotal.HeaderText = "SubTotal";
             this.ColumnTotal.Name = "ColumnTotal";
             this.ColumnTotal.ReadOnly = true;
-            this.ColumnTotal.Width = 58;
+            this.ColumnTotal.Width = 80;
             // 
             // FormVentas
             // 
@@ -545,7 +554,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrec;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCant;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTotal;

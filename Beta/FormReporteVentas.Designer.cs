@@ -1,6 +1,6 @@
 ﻿namespace Beta
 {
-    partial class FormEstadisticasVentas
+    partial class FormReporteVentas
     {
         /// <summary>
         /// Required designer variable.
@@ -52,7 +52,7 @@
             legend1.Name = "Legend1";
             legend1.TitleBackColor = System.Drawing.Color.Black;
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(22, 12);
+            this.chart1.Location = new System.Drawing.Point(390, 234);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.BorderColor = System.Drawing.Color.Black;
@@ -82,7 +82,7 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
-            // FormEstadisticasVentas
+            // FormReporteVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -91,7 +91,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chart1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormEstadisticasVentas";
+            this.Name = "FormReporteVentas";
             this.Text = "FormEstadisticasVentas";
             this.Load += new System.EventHandler(this.FormEstadisticasVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

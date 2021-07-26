@@ -212,7 +212,6 @@ Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.csprojAssembly
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.Editar_Perfil.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormCompras.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormDetalleVenta.resources
-Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormEstadisticasVentas.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormClientes.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormProductos.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormProveedores.resources
@@ -244,3 +243,6 @@ Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.exe.manifest
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.application
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.csproj.CopyComplete
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.pdb
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormReporteVentas.resources
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.ListaDeProveedor.resources
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.ListaProductosCompra.resources

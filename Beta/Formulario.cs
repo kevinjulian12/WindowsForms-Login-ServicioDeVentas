@@ -210,7 +210,7 @@ namespace Beta
         private void btnrptventa_Click(object sender, EventArgs e)
         {
             SubmenuReportes.Visible = false;
-            FormEstadisticasVentas fv = new FormEstadisticasVentas();
+            FormReporteVentas fv = new FormReporteVentas();
             openChildFormInPanel(fv);
             label4.Text = "Reportes de Ventas";
         }

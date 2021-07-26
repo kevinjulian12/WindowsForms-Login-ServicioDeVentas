@@ -25,9 +25,9 @@ namespace Domain
            return VentasItems.MostrarDetVent(idventa);
         }
 
-        public void InsertarItems(int idVenta,int idproducto,float precioUnitario,int cantidad,float precioTotal)
+        public void InsertarItems(int idVenta,int idproducto,float precioUnitario,int cantidad,float subTotal)
         {
-            VentasItems.Insertar(idVenta, idproducto, precioUnitario, cantidad, precioTotal);
+            VentasItems.Insertar(idVenta, idproducto, precioUnitario, cantidad, subTotal);
         }
     }
 }

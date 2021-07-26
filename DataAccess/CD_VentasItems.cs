@@ -18,7 +18,7 @@ namespace DataAccess
         public DataTable MostrarDetVent(int IdVenta)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select Nombre,Marca,Descripcion,Precio,Cantidad,PrecioTotal from ventasitems join productos on IDProducto=productos.ID where IDVenta= " + IdVenta;
+            comando.CommandText = "select Nombre,Marca,Descripcion,Precio,Cantidad,SubTotal from ventasitems join productos on IDProducto=productos.ID where IDVenta= " + IdVenta;
             comando.CommandType = CommandType.Text;
             leer = comando.ExecuteReader();
             tabla.Load(leer);
@@ -26,10 +26,10 @@ namespace DataAccess
             return tabla;
         }
 
-        public void Insertar(int IDVenta,int IDProducto,float PrecioUnitario,int Cantidad,float PrecioTotal)
+        public void Insertar(int IDVenta,int IDProducto,float PrecioUnitario,int Cantidad,float SubTotal)
         {
             comando.Connection = conexion.AbrirConexion();
-            string total1 = PrecioTotal.ToString().Replace(',', '.');
+            string total1 = SubTotal.ToString().Replace(',', '.');
             string precio1 = PrecioUnitario.ToString().Replace(',', '.');
             comando.CommandText = "insert into ventasitems values (" + IDVenta.ToString() + "," + IDProducto + "," + precio1 + "," + Cantidad + "," + total1 + ");";
             comando.CommandType = CommandType.Text;

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Beta.exe" size="284672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Beta.exe" size="291840">
       <assemblyIdentity name="Beta" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fNZFmOdJftC6hHjxENyO7LUOYCWVrtKT6kNip6IXKig=</dsig:DigestValue>
+        <dsig:DigestValue>WQTVy9zwiU4kTYQ+kNWVqmWSUW3otEJpfoC2m8F6AyQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -73,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>a/6KZu3pnbtxB+xESl5zxW45aa2EOgCLC7D5OfYJAqw=</dsig:DigestValue>
+        <dsig:DigestValue>ekBfx51ijqUKOYRsIdt4OnH+K87/A3xnQvC1rtBoYgA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,7 +85,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9NB/eMsgiqYzjj8b89jZKGAksLcakDWScrayXL+GSG8=</dsig:DigestValue>
+        <dsig:DigestValue>gURVJAZXhHq/+BPkChN5+AVckiGFlgR+TWijJDNCqoY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

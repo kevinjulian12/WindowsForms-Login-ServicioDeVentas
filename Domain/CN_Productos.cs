@@ -17,9 +17,9 @@ namespace Domain
             tabla = objetoCD.Mostrar();
             return tabla;
         }
-        public void InsertarPRod(string nombre, string desc, string marca, string precio, string stock)
+        public void InsertarPRod(string nombre, string desc, string marca,string costo ,string precio, string stock)
         {
-            objetoCD.Insertar(nombre, desc, marca, Convert.ToDouble(precio), Convert.ToInt32(stock));
+            objetoCD.Insertar(nombre, desc, marca, Convert.ToDouble(costo), Convert.ToDouble(precio), Convert.ToInt32(stock));
         }
         public void EditarProd(string nombre, string desc, string marca, string precio, string stock, string id)
         {

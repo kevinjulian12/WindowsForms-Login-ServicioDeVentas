@@ -107,11 +107,11 @@
     <Compile Include="FormDetalleVenta.Designer.cs">
       <DependentUpon>FormDetalleVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEstadisticasVentas.cs">
+    <Compile Include="FormReporteVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEstadisticasVentas.Designer.cs">
-      <DependentUpon>FormEstadisticasVentas.cs</DependentUpon>
+    <Compile Include="FormReporteVentas.Designer.cs">
+      <DependentUpon>FormReporteVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="FormClientes.cs">
       <SubType>Form</SubType>
@@ -167,6 +167,18 @@
     <Compile Include="ListaDeProductos.Designer.cs">
       <DependentUpon>ListaDeProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaDeProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaDeProveedor.Designer.cs">
+      <DependentUpon>ListaDeProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaProductosCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaProductosCompra.Designer.cs">
+      <DependentUpon>ListaProductosCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Log in.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,8 +202,8 @@
     <EmbeddedResource Include="FormDetalleVenta.resx">
       <DependentUpon>FormDetalleVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEstadisticasVentas.resx">
-      <DependentUpon>FormEstadisticasVentas.cs</DependentUpon>
+    <EmbeddedResource Include="FormReporteVentas.resx">
+      <DependentUpon>FormReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
@@ -219,6 +231,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListaDeProductos.resx">
       <DependentUpon>ListaDeProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaDeProveedor.resx">
+      <DependentUpon>ListaDeProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaProductosCompra.resx">
+      <DependentUpon>ListaProductosCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Log in.resx">
       <DependentUpon>Log in.cs</DependentUpon>

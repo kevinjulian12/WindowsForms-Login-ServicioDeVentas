@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Beta
 {
-    public partial class FormEstadisticasVentas : Form
+    public partial class FormReporteVentas : Form
     {
-        public FormEstadisticasVentas()
+        public FormReporteVentas()
         {
             InitializeComponent();
         }

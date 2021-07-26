@@ -18,6 +18,7 @@ namespace Beta
         private string idProducto = null;
         private bool Editar = false;
         private string id;
+        private float costo = 0;
         public FormProductos()
         {
             InitializeComponent();
@@ -58,7 +59,7 @@ namespace Beta
                             }
                             else
                             {
-                                objetoCN.InsertarPRod(txtNombre.Text, txtDesc.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
+                                objetoCN.InsertarPRod(txtNombre.Text, txtDesc.Text, txtMarca.Text,Convert.ToString(costo) ,txtPrecio.Text, txtStock.Text);
                                 MessageBox.Show("se inserto correctamente");
                                 MostrarProdctos();
                                 limpiarForm();
@@ -222,10 +223,7 @@ namespace Beta
             textBox1.Clear();
             label6.Visible = true;
             btnCancelar.Enabled = false;
-            // if (dataGridView1.SelectedRows.Count > 0)
-            //{
-            //  btnCancelar.Enabled = true;
-            //}
+        
         }
         string NombreColumna = "";
 

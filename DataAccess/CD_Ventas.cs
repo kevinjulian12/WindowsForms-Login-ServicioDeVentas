@@ -49,15 +49,7 @@ namespace DataAccess
             return IdVenta;
         }
 
-    //public void Editar(int Id,string nombre,float precio,string categoria)
-    //    { 
-    //    comando.Connection = conexion.AbrirConexion();
-    //    comando.CommandText = "update productos set Nombre='" + nombre + "',Precio='" + precio + "',Categoria='" + categoria + "' where ID='" + Id + "'";
-    //    comando.CommandType = CommandType.Text;
-    //    comando.ExecuteNonQuery();
-    //    comando.Parameters.Clear();
-    //    conexion.CerrarConexion();
-    //    }
+ 
 
     public void EliminarHist(int Id)
         { 

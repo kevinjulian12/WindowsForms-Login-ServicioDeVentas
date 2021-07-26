@@ -27,7 +27,7 @@ namespace DataAccess
             return tabla;
 
         }
-        public void Insertar(string nombre, string desc, string marca, double precio, int stock)
+        public void Insertar(string nombre, string desc, string marca,double costo, double precio, int stock)
         {
             comando.Connection = conexion.AbrirConexion();
             //comando.CommandText = "insert into Productos(Nombre , Descripcion , Marca , Precio , Stock) values('" + nombre+"', '"+desc+"', '"+marca+"', '"+precio+"','"+stock+"')";
@@ -36,6 +36,7 @@ namespace DataAccess
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.Parameters.AddWithValue("@descrip", desc);
             comando.Parameters.AddWithValue("@Marca", marca);
+            comando.Parameters.AddWithValue("@costo", costo);
             comando.Parameters.AddWithValue("@precio", precio);
             comando.Parameters.AddWithValue("@stock", stock);
             comando.ExecuteNonQuery();

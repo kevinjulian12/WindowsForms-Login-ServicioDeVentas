@@ -50,10 +50,10 @@ namespace Beta
                     if (row.Cells[0].Value != null) {
                         ventasItem.InsertarItems(Convert.ToInt32(idVenta),
                                              Convert.ToInt32(row.Cells[0].Value),
-                                             Convert.ToSingle(row.Cells[2].Value),
-                                             Convert.ToInt32(row.Cells[3].Value),
-                                             Convert.ToSingle(row.Cells[4].Value));
-                        Productos.RestarStock(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(row.Cells[3].Value));
+                                             Convert.ToSingle(row.Cells[3].Value),
+                                             Convert.ToInt32(row.Cells[4].Value),
+                                             Convert.ToSingle(row.Cells[5].Value));
+                        Productos.RestarStock(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(row.Cells[4].Value));
                     }
                 }
                 dataGridView1.DataSource = "";
@@ -79,7 +79,7 @@ namespace Beta
             float total = 0;
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                total += (float)row.Cells[4].Value;
+                total += (float)row.Cells[5].Value;
             }
             labelTotal.Text = Convert.ToString(total);
         }
@@ -87,16 +87,23 @@ namespace Beta
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             var stock = Productos.consultarStock(Convert.ToInt32(iDproducto));
+            int sobreCarga = 0;
             if (txtCantidad.Text == "")
             {
                 MessageBox.Show("Complete todos los textos, por favor");
             }
             else
             {
-                //object stock = Productos.consultarStock(Convert.ToInt32(iDproducto))
-                if (Convert.ToInt32(stock) >= Convert.ToInt32(txtCantidad.Text))
+                foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    dataGridView1.Rows.Add(iDproducto, textBox1.Text, txtPrecio.Text, txtCantidad.Text, Convert.ToSingle(txtPrecio.Text) * Convert.ToInt32(txtCantidad.Text));
+                    if (Convert.ToInt32(row.Cells[0].Value) == Convert.ToInt32(iDproducto) )
+                    {
+                        sobreCarga += Convert.ToInt32(row.Cells[3].Value) + Convert.ToInt32(txtCantidad.Text);
+                    }
+                }
+                if ((Convert.ToInt32(stock) >= Convert.ToInt32(txtCantidad.Text)) && (Convert.ToInt32(stock) >= sobreCarga))
+                {
+                    dataGridView1.Rows.Add(iDproducto, textBox1.Text, txtMarca.Text ,txtPrecio.Text, txtCantidad.Text, Convert.ToSingle(txtPrecio.Text) * Convert.ToInt32(txtCantidad.Text));
                     Sumar();
                     limpiarFormProducto();
                 }
