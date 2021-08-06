@@ -73,6 +73,16 @@ namespace Beta.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bell_ring_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("bell-ring-solid-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close_Icon {
             get {
                 object obj = ResourceManager.GetObject("Close_Icon", resourceCulture);
@@ -214,6 +224,16 @@ namespace Beta.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap log_out_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("log-out-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maxi {
             get {
                 object obj = ResourceManager.GetObject("maxi", resourceCulture);
@@ -294,6 +314,16 @@ namespace Beta.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap user_circle_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("user-circle-solid-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_icon_icons_com_66546 {
             get {
                 object obj = ResourceManager.GetObject("user_icon-icons.com_66546", resourceCulture);
@@ -317,6 +347,26 @@ namespace Beta.Properties {
         internal static System.Drawing.Bitmap value__1_ {
             get {
                 object obj = ResourceManager.GetObject("value (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap window_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("window-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap windows_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("windows-regular-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

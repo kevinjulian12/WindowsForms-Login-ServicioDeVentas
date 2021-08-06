@@ -22,6 +22,10 @@ namespace Beta
         {
             InitializeComponent();
             btnCancelar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnGuardar.Enabled = false;
+            btnHistorial.Enabled = false;
         }
 
         public void FormListasClientes_Load(object sender, EventArgs e)
@@ -42,17 +46,17 @@ namespace Beta
             {
                 try
                 {
-                    if (txtapellido.TextLength < 3 || txtdireccion.TextLength < 3 || txtLocalidad.TextLength < 3 || txtnombre.TextLength < 3 || txttelefono.TextLength < 6)
+                    if (txtapellido.Texts.Length < 3 || txtdireccion.Texts.Length < 3 || txtLocalidad.Texts.Length < 3 || txtnombre.Texts.Length < 3 || txttelefono.Texts.Length < 6)
                     {
                         MessageBox.Show("Complete todos los campos, deben tener como minimo 3 caracter y telefono minimo de 6 caracter");
                     }
                     else
                     {
-                        objetoCN.Nombre = txtnombre.Text;
-                        objetoCN.Apellido = txtapellido.Text;
-                        objetoCN.Direccion = txtdireccion.Text;
-                        objetoCN.Localidad = txtLocalidad.Text;
-                        objetoCN.Telefono = txttelefono.Text;
+                        objetoCN.Nombre = txtnombre.Texts;
+                        objetoCN.Apellido = txtapellido.Texts;
+                        objetoCN.Direccion = txtdireccion.Texts;
+                        objetoCN.Localidad = txtLocalidad.Texts;
+                        objetoCN.Telefono = txttelefono.Texts;
                         objetoCN.InsertarClien();
                         MessageBox.Show("se inserto correctamente");
                         MostrarClientes();
@@ -73,13 +77,13 @@ namespace Beta
                 try
                 {
 
-                    if (txtapellido.TextLength < 3 || txtdireccion.TextLength < 3 || txtLocalidad.TextLength < 3 || txtnombre.TextLength < 3 || txttelefono.TextLength < 6)
+                    if (txtapellido.Texts.Length < 3 || txtdireccion.Texts.Length < 3 || txtLocalidad.Texts.Length < 3 || txtnombre.Texts.Length< 3 || txttelefono.Texts.Length < 6)
                     {
                         MessageBox.Show("Complete todos los campos, deben tener como minimo 3 caracter y telefono minimo de 6 caracter");
                     }
                     else
                     {
-                        objetoCN.EditarClien(id, txtnombre.Text, txtapellido.Text, txtdireccion.Text, txttelefono.Text, txtLocalidad.Text);
+                        objetoCN.EditarClien(id, txtnombre.Texts, txtapellido.Texts, txtdireccion.Texts, txttelefono.Texts, txtLocalidad.Texts);
                         MessageBox.Show("se edito correctamente");
                         MostrarClientes();
                         limpiarForm();
@@ -129,11 +133,11 @@ namespace Beta
             {
                 Editar = true;
                 id = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
-                txtnombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
-                txtapellido.Text = dataGridView1.CurrentRow.Cells["Apellido"].Value.ToString();
-                txtdireccion.Text = dataGridView1.CurrentRow.Cells["Direccion"].Value.ToString();
-                txttelefono.Text = dataGridView1.CurrentRow.Cells["Telefono"].Value.ToString();
-                txtLocalidad.Text = dataGridView1.CurrentRow.Cells["Localidad"].Value.ToString();
+                txtnombre.Texts = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
+                txtapellido.Texts = dataGridView1.CurrentRow.Cells["Apellido"].Value.ToString();
+                txtdireccion.Texts = dataGridView1.CurrentRow.Cells["Direccion"].Value.ToString();
+                txttelefono.Texts = dataGridView1.CurrentRow.Cells["Telefono"].Value.ToString();
+                txtLocalidad.Texts = dataGridView1.CurrentRow.Cells["Localidad"].Value.ToString();
                 btnEditar.Enabled = false;
                 btnEliminar.Enabled = false;
                 dataGridView1.Enabled = false;
@@ -145,11 +149,11 @@ namespace Beta
 
         private void limpiarForm()
         {
-            txtnombre.Clear();
-            txtapellido.Clear();
-            txtdireccion.Clear();
-            txttelefono.Clear();
-            txtLocalidad.Clear();
+            txtnombre.Texts = "";
+            txtapellido.Texts = "";
+            txtdireccion.Texts = "";
+            txttelefono.Texts = "";
+            txtLocalidad.Texts = "";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -232,7 +236,7 @@ namespace Beta
 
         private void Activar_Guardar(object sender, EventArgs e)
         {
-            if(txtapellido.Text == "" && txtdireccion.Text == "" && txtLocalidad.Text == "" && txtnombre.Text == "" && txttelefono.Text == "")
+            if(txtapellido.Texts == "" && txtdireccion.Texts == "" && txtLocalidad.Texts == "" && txtnombre.Texts == "" && txttelefono.Texts == "")
             {
                 btnGuardar.Enabled = false;
             }

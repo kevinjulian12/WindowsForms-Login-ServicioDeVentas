@@ -67,11 +67,12 @@ create proc EditarProductos
 @nombre nvarchar (100),
 @descrip nvarchar (100),
 @marca nvarchar (100),
+@costo float,
 @precio float,
 @stock int,
 @id int
 as
-update Productos set Nombre=@nombre, Descripcion=@descrip, Marca=@marca, Precio=@precio, Stock=@stock where Id=@id
+update Productos set Nombre=@nombre, Descripcion=@descrip, Marca=@marca,Costo=@costo, Precio=@precio, Stock=@stock where Id=@id
 go
 
 create table Proveedor 

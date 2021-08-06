@@ -17,6 +17,16 @@ namespace Domain
             tabla = objetoCD.Mostrar();
             return tabla;
         }
+        public DataTable consultarStock2()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.consultarStock2();
+            return tabla;
+            
+        }
+
+
+
         public void InsertarPRod(string nombre, string desc, string marca,string costo ,string precio, string stock)
         {
             objetoCD.Insertar(nombre, desc, marca, Convert.ToDouble(costo), Convert.ToDouble(precio), Convert.ToInt32(stock));

@@ -46,7 +46,7 @@ namespace Beta
         }
         int lx, ly;
         int sw, sh;
-        private void iconmaximizar_Click(object sender, EventArgs e)
+       private void iconmaximizar_Click(object sender, EventArgs e)
         {
             lx = this.Location.X;
             ly = this.Location.Y;
@@ -57,6 +57,18 @@ namespace Beta
             iconrestaurar.Visible = true;
             iconmaximizar.Visible = false;
         }
+        public void Maximizar()
+        {
+            lx = this.Location.X;
+            ly = this.Location.Y;
+            sw = this.Size.Width;
+            sh = this.Size.Height;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            iconrestaurar.Visible = true;
+            iconmaximizar.Visible = false;
+        }
+
 
         private void iconrestaurar_Click(object sender, EventArgs e)
         {
@@ -224,18 +236,8 @@ namespace Beta
         {
             SubmenuReportes.Visible = false;
         }
-        private void tmFechaHora_Tick(object sender, EventArgs e)
-        {
-            lbFecha.Text = DateTime.Now.ToLongDateString();
-            lbHora.Text = DateTime.Now.ToString("HH:mm:ssss");
-        }
+      
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Editar_Perfil editar_Perfil = new Editar_Perfil();
-            openChildFormInPanel(editar_Perfil);
-            label4.Text = "Mi Perfil";
-        }
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -243,17 +245,39 @@ namespace Beta
             openChildFormInPanel(pagos);
             label4.Text = "Pagos";
         }
-  
+
+      
+
+        private void botonUsuario_Click_1(object sender, EventArgs e)
+        {
+            Editar_Perfil editar_Perfil = new Editar_Perfil();
+            openChildFormInPanel(editar_Perfil);
+            label4.Text = "Mi Perfil";
+        }
+
+        private void boton1_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
         public void LoadUserData()
         {
-            lblUsername.Text = UserCache.LoginName;
-            lblPosition.Text = UserCache.Position;
-            lblEmail.Text = UserCache.Email;
+            CN_Productos productos = new CN_Productos();
+            int stock = 0;
+           //if ()
+           //{
+           //   // var stock +Convert.ToInt32(productos.consultarStock2().Rows);
+           //}
+
+            boton1.Text = Convert.ToString( stock);
+            botonUsuario.Text = UserCache.LoginName;
+           
         }
 
         private void privilegio()
         {
-            if(lblPosition.Text != "Administrator") {
+            if(UserCache.Position != "Administrator") {
                 btnProductos.Enabled = false;
                 btnReportes.Enabled = false;
                 btnrptcompra.Enabled = false;

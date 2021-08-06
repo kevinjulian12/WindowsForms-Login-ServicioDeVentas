@@ -35,16 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelChildForm1 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblPosition = new System.Windows.Forms.Label();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.lbHora = new System.Windows.Forms.Label();
-            this.lbFecha = new System.Windows.Forms.Label();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,6 +49,8 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnrptventa = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.boton1 = new Beta.Controles.Boton();
+            this.botonUsuario = new Beta.Controles.Boton();
             this.iconmaximizar = new System.Windows.Forms.PictureBox();
             this.iconrestaurar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
@@ -74,7 +66,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitulo.SuspendLayout();
             this.panelChildForm1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelSideMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -90,6 +81,8 @@
             // panelTitulo
             // 
             this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panelTitulo.Controls.Add(this.boton1);
+            this.panelTitulo.Controls.Add(this.botonUsuario);
             this.panelTitulo.Controls.Add(this.label4);
             this.panelTitulo.Controls.Add(this.iconmaximizar);
             this.panelTitulo.Controls.Add(this.iconrestaurar);
@@ -104,8 +97,7 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
@@ -114,6 +106,7 @@
             this.label4.Size = new System.Drawing.Size(52, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Inicio";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
             // label1
@@ -137,7 +130,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelChildForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.panelChildForm1.Controls.Add(this.panelChildForm);
-            this.panelChildForm1.Controls.Add(this.panel1);
             this.panelChildForm1.Location = new System.Drawing.Point(228, 34);
             this.panelChildForm1.Name = "panelChildForm1";
             this.panelChildForm1.Size = new System.Drawing.Size(898, 554);
@@ -148,140 +140,8 @@
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(0, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(898, 482);
+            this.panelChildForm.Size = new System.Drawing.Size(898, 554);
             this.panelChildForm.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.lblEmail);
-            this.panel1.Controls.Add(this.lblPosition);
-            this.panel1.Controls.Add(this.lblUsername);
-            this.panel1.Controls.Add(this.lbHora);
-            this.panel1.Controls.Add(this.lbFecha);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 482);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(898, 72);
-            this.panel1.TabIndex = 0;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(3, -2);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 16);
-            this.linkLabel1.TabIndex = 17;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Mi Perfil";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 54);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 18);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "email:";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 18);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Posición:";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 18);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Usuario:";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(80, 54);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(48, 18);
-            this.lblEmail.TabIndex = 13;
-            this.lblEmail.Text = "email";
-            // 
-            // lblPosition
-            // 
-            this.lblPosition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPosition.AutoSize = true;
-            this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.ForeColor = System.Drawing.Color.White;
-            this.lblPosition.Location = new System.Drawing.Point(80, 34);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(74, 18);
-            this.lblPosition.TabIndex = 12;
-            this.lblPosition.Text = "Posición";
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(80, 14);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(67, 18);
-            this.lblUsername.TabIndex = 11;
-            this.lblUsername.Text = "Usuario";
-            // 
-            // lbHora
-            // 
-            this.lbHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbHora.AutoSize = true;
-            this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHora.ForeColor = System.Drawing.Color.White;
-            this.lbHora.Location = new System.Drawing.Point(791, 24);
-            this.lbHora.Name = "lbHora";
-            this.lbHora.Size = new System.Drawing.Size(60, 20);
-            this.lbHora.TabIndex = 10;
-            this.lbHora.Text = "HORA";
-            this.lbHora.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lbFecha
-            // 
-            this.lbFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbFecha.AutoSize = true;
-            this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFecha.ForeColor = System.Drawing.Color.White;
-            this.lbFecha.Location = new System.Drawing.Point(650, 53);
-            this.lbFecha.Name = "lbFecha";
-            this.lbFecha.Size = new System.Drawing.Size(69, 20);
-            this.lbFecha.TabIndex = 9;
-            this.lbFecha.Text = "FECHA";
-            this.lbFecha.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panelLogo
             // 
@@ -456,16 +316,53 @@
             this.btnrptventa.UseVisualStyleBackColor = false;
             this.btnrptventa.Click += new System.EventHandler(this.btnrptventa_Click);
             // 
-            // timer1
+            // boton1
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.tmFechaHora_Tick);
+            this.boton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.boton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.boton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.boton1.BorderRadius = 0;
+            this.boton1.BorderSize = 0;
+            this.boton1.FlatAppearance.BorderSize = 0;
+            this.boton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton1.ForeColor = System.Drawing.Color.White;
+            this.boton1.Image = global::Beta.Properties.Resources.bell_ring_solid_24;
+            this.boton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.boton1.Location = new System.Drawing.Point(157, -4);
+            this.boton1.Name = "boton1";
+            this.boton1.Size = new System.Drawing.Size(150, 40);
+            this.boton1.TabIndex = 20;
+            this.boton1.Text = "boton1";
+            this.boton1.TextColor = System.Drawing.Color.White;
+            this.boton1.UseVisualStyleBackColor = false;
+            this.boton1.Click += new System.EventHandler(this.boton1_Click);
+            // 
+            // botonUsuario
+            // 
+            this.botonUsuario.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.botonUsuario.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.botonUsuario.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.botonUsuario.BorderRadius = 13;
+            this.botonUsuario.BorderSize = 1;
+            this.botonUsuario.FlatAppearance.BorderSize = 0;
+            this.botonUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonUsuario.ForeColor = System.Drawing.Color.White;
+            this.botonUsuario.Image = global::Beta.Properties.Resources.user_circle_solid_24;
+            this.botonUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botonUsuario.Location = new System.Drawing.Point(6, 3);
+            this.botonUsuario.Name = "botonUsuario";
+            this.botonUsuario.Size = new System.Drawing.Size(122, 27);
+            this.botonUsuario.TabIndex = 19;
+            this.botonUsuario.Text = "Usuario";
+            this.botonUsuario.TextColor = System.Drawing.Color.White;
+            this.botonUsuario.UseVisualStyleBackColor = false;
+            this.botonUsuario.Click += new System.EventHandler(this.botonUsuario_Click_1);
             // 
             // iconmaximizar
             // 
             this.iconmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconmaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconmaximizar.Image = global::Beta.Properties.Resources.fullscreen_regular_blanco;
+            this.iconmaximizar.Image = global::Beta.Properties.Resources.window_regular_24;
             this.iconmaximizar.Location = new System.Drawing.Point(840, 8);
             this.iconmaximizar.Name = "iconmaximizar";
             this.iconmaximizar.Size = new System.Drawing.Size(22, 22);
@@ -478,7 +375,7 @@
             // 
             this.iconrestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconrestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconrestaurar.Image = global::Beta.Properties.Resources.exit_fullscreen_regular_24__1_;
+            this.iconrestaurar.Image = global::Beta.Properties.Resources.windows_regular_24;
             this.iconrestaurar.Location = new System.Drawing.Point(838, 7);
             this.iconrestaurar.Name = "iconrestaurar";
             this.iconrestaurar.Size = new System.Drawing.Size(22, 22);
@@ -518,10 +415,10 @@
             // 
             this.btnsalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
-            this.btnsalir.Location = new System.Drawing.Point(3, 3);
+            this.btnsalir.Image = global::Beta.Properties.Resources.log_out_regular_24;
+            this.btnsalir.Location = new System.Drawing.Point(6, 9);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(48, 40);
+            this.btnsalir.Size = new System.Drawing.Size(45, 34);
             this.btnsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnsalir.TabIndex = 21;
             this.btnsalir.TabStop = false;
@@ -697,8 +594,6 @@
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             this.panelChildForm1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.panelSideMenu.ResumeLayout(false);
@@ -734,16 +629,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lbHora;
-        private System.Windows.Forms.Label lbFecha;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label lblPosition;
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel SubmenuReportes;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
@@ -760,6 +646,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private Controles.Boton botonUsuario;
+        private Controles.Boton boton1;
     }
 }

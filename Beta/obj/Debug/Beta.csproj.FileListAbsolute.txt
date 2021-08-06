@@ -247,3 +247,4 @@ Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormReporteVen
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.ListaDeProveedor.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.ListaProductosCompra.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormDetalleCompras.resources
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.Controles.TextBox.resources

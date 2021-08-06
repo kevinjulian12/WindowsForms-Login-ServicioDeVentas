@@ -22,16 +22,17 @@ namespace Beta
         {
             EncryptHelper encryptHelper = new EncryptHelper();
 
-            if (txtUsername.Text != "Username" && txtUsername.TextLength > 2)
+            if (txtUsername.Texts != "Username" && txtUsername.Texts.Length > 2)
             {
-                if (encryptHelper.Sha256Encrypt(txtPassword.Text) != "Password")
+                if (encryptHelper.Sha256Encrypt(txtPassword.Texts) != "Password")
                 {
                     UserModel user = new UserModel();
-                    var validLogin = user.LoginUser(txtUsername.Text, txtPassword.Text);
+                    var validLogin = user.LoginUser(txtUsername.Texts, txtPassword.Texts);
                     if (validLogin == true)
                     {
                         Formulario mainMenu = new Formulario();
                         // MessageBox.Show("Bienvenido " + UserCache.FirstName + ", " + UserCache.LastName);
+                        mainMenu.Maximizar();
                         mainMenu.Show();
                         mainMenu.FormClosed += Logout;
                         this.Hide();
@@ -39,8 +40,9 @@ namespace Beta
                     else
                     {
                         msgError("Nombre de usuario o contraseña incorrectos. Por favor intente nuevamente.");
-                        txtPassword.Text = "";
-                        txtPassword.UseSystemPasswordChar = false;
+                        txtPassword.Texts = "";
+                        txtPassword.PasswordChar = true;
+                        
                         txtUsername.Focus();
                     }
                 }
@@ -57,8 +59,8 @@ namespace Beta
 
         private void Logout(object sender, FormClosedEventArgs e)
         {
-            txtPassword.Text = "";
-            txtPassword.UseSystemPasswordChar = false;
+            txtPassword.Texts = "";
+            txtPassword.PasswordChar = true;
             txtUsername.Text = "";
             lblErrorMessage.Visible = false;
             this.Show();
@@ -76,9 +78,9 @@ namespace Beta
 
         private void txtUsername_Enter(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "Usuario")
+            if (txtUsername.Texts == "Usuario")
             {
-                txtUsername.Text = "";
+                txtUsername.Texts = "";
                 txtUsername.ForeColor = Color.LightGray;
             }
         }

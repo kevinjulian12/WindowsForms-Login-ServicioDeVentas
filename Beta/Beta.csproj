@@ -88,6 +88,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controles\Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\TextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\TextBox.Designer.cs">
+      <DependentUpon>TextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Editar_Perfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +208,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controles\TextBox.resx">
+      <DependentUpon>TextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editar_Perfil.resx">
       <DependentUpon>Editar_Perfil.cs</DependentUpon>
     </EmbeddedResource>
@@ -386,6 +398,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exit-fullscreen-regular-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-circle-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bell-ring-solid-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

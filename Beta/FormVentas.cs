@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Runtime;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain;
+using System;
 using System.Windows.Forms;
-using System.Timers;
-using Domain;
 
 namespace Beta
 {
@@ -38,27 +29,38 @@ namespace Beta
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (IDcliente == null) {
+            if (IDcliente == null)
+            {
                 MessageBox.Show("seleccionar un cliente");
             }
-            else {
-                DateTime hora = DateTime.Today;
-                float total = Convert.ToSingle(labelTotal.Text); 
-                var idVenta = ventas.InsertarVenta(Convert.ToInt32(IDcliente), hora, total);
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+            else
+            {
+                if (dataGridView1.RowCount == 0)
                 {
-                    if (row.Cells[0].Value != null) {
-                        ventasItem.InsertarItems(Convert.ToInt32(idVenta),
-                                             Convert.ToInt32(row.Cells[0].Value),
-                                             Convert.ToSingle(row.Cells[3].Value),
-                                             Convert.ToInt32(row.Cells[4].Value),
-                                             Convert.ToSingle(row.Cells[5].Value));
-                        Productos.RestarStock(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(row.Cells[4].Value));
-                    }
+                    MessageBox.Show("No hay productos");
                 }
-                dataGridView1.DataSource = "";
-                limpiarFormCliente();
-                MessageBox.Show("se inserto correctamente");
+
+                else
+                {
+                    DateTime hora = DateTime.Today;
+                    float total = Convert.ToSingle(labelTotal.Text);
+                    var idVenta = ventas.InsertarVenta(Convert.ToInt32(IDcliente), hora, total);
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (row.Cells[0].Value != null)
+                        {
+                            ventasItem.InsertarItems(Convert.ToInt32(idVenta),
+                                                 Convert.ToInt32(row.Cells[0].Value),
+                                                 Convert.ToSingle(row.Cells[3].Value),
+                                                 Convert.ToInt32(row.Cells[4].Value),
+                                                 Convert.ToSingle(row.Cells[5].Value));
+                            Productos.RestarStock(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(row.Cells[4].Value));
+                        }
+                    }
+                    dataGridView1.DataSource = "";
+                    limpiarFormCliente();
+                    MessageBox.Show("se inserto correctamente");
+                }
             }
         }
 
@@ -67,13 +69,13 @@ namespace Beta
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
-            Sumar();
-                    }
+                Sumar();
+            }
             else
                 MessageBox.Show("seleccione una fila por favor");
-        
+
         }
-        
+
         public void Sumar()
         {
             float total = 0;
@@ -91,26 +93,37 @@ namespace Beta
             if (txtCantidad.Text == "")
             {
                 MessageBox.Show("Complete todos los textos, por favor");
+               
             }
             else
             {
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+                if (txtCantidad.Text == "0")
                 {
-                    if (Convert.ToInt32(row.Cells[0].Value) == Convert.ToInt32(iDproducto) )
-                    {
-                        sobreCarga += Convert.ToInt32(row.Cells[3].Value) + Convert.ToInt32(txtCantidad.Text);
-                    }
-                }
-                if ((Convert.ToInt32(stock) >= Convert.ToInt32(txtCantidad.Text)) && (Convert.ToInt32(stock) >= sobreCarga))
-                {
-                    dataGridView1.Rows.Add(iDproducto, textBox1.Text, txtMarca.Text ,txtPrecio.Text, txtCantidad.Text, Convert.ToSingle(txtPrecio.Text) * Convert.ToInt32(txtCantidad.Text));
-                    Sumar();
-                    limpiarFormProducto();
+                    MessageBox.Show("Ingresar una cantidad mayor a 0");
                 }
                 else
                 {
-                    MessageBox.Show("No hay stock");
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (Convert.ToInt32(row.Cells[0].Value) == Convert.ToInt32(iDproducto))
+                        {
+                            sobreCarga += Convert.ToInt32(row.Cells[4].Value);
+                        }
+                    }
+
+                    if (sobreCarga + Convert.ToInt32(txtCantidad.Text) <= Convert.ToInt32(stock))
+                    {
+                        dataGridView1.Rows.Add(iDproducto, textBox1.Text, txtMarca.Text, txtPrecio.Text, txtCantidad.Text, Convert.ToSingle(txtPrecio.Text) * Convert.ToInt32(txtCantidad.Text));
+                        Sumar();
+                        limpiarFormProducto();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay stock");
+                    }
                 }
+           
+            
             }
         }
 

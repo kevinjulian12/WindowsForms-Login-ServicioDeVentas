@@ -109,5 +109,17 @@ namespace DataAccess
             conexion.CerrarConexion();
             return stock;
         }
+
+        public DataTable consultarStock2()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select Stock from Productos ";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+
+        }
     }
 }
