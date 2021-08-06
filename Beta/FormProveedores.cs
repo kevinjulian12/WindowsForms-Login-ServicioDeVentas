@@ -216,6 +216,7 @@ namespace Beta
         private void btnCompras_Click(object sender, EventArgs e)
         {
             HistorialProveedor historialProveedor = new HistorialProveedor();
+            historialProveedor.id= Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value);
             historialProveedor.ShowDialog();
         }
     }

@@ -124,6 +124,46 @@ namespace Beta.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exit_fullscreen_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("exit-fullscreen-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit_fullscreen_regular_24__1_ {
+            get {
+                object obj = ResourceManager.GetObject("exit-fullscreen-regular-24 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fullscreen_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("fullscreen-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fullscreen_regular_blanco {
+            get {
+                object obj = ResourceManager.GetObject("fullscreen-regular-blanco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_maximizar {
             get {
                 object obj = ResourceManager.GetObject("icon maximizar", resourceCulture);
@@ -214,6 +254,36 @@ namespace Beta.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minus_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("minus-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minus_regular_24__1_ {
+            get {
+                object obj = ResourceManager.GetObject("minus-regular-24 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minus_regular_24__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("minus-regular-24 (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shopping_cart__1_ {
             get {
                 object obj = ResourceManager.GetObject("shopping-cart (1)", resourceCulture);
@@ -247,6 +317,26 @@ namespace Beta.Properties {
         internal static System.Drawing.Bitmap value__1_ {
             get {
                 object obj = ResourceManager.GetObject("value (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap x_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("x-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap x_regular_24__1_ {
+            get {
+                object obj = ResourceManager.GetObject("x-regular-24 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

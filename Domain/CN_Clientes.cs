@@ -12,15 +12,47 @@ namespace Domain
     {
         private CD_Clientes objetoCD = new CD_Clientes();
 
+        private String elApellido;
+        private String elNombre;
+        private String elTelefono;
+        private String laDireccion;
+        private String laLocalidad;
+
+        public String Apellido
+        {
+            get { return elApellido; }
+            set { elApellido = value.ToString(); }
+        }
+        public String Nombre
+        {
+            get { return elNombre; }
+            set { elNombre = value.ToString(); }
+        }
+        public String Telefono
+        {
+            get { return elTelefono; }
+            set { elTelefono = value.ToString(); }
+        }
+        public String Direccion
+        {
+            get { return laDireccion; }
+            set { laDireccion = value.ToString(); }
+        }
+        public String Localidad
+        {
+            get { return laLocalidad; }
+            set { laLocalidad = value.ToString(); }
+        }
+
         public DataTable MostrarClien()
         {
             DataTable tabla = new DataTable();
             tabla = objetoCD.Mostrar();
             return tabla;
         }
-        public void InsertarClien(string Nombre, string Apellido, string Direccion, string Telefono,string Localidad)
+        public void InsertarClien()
         {
-            objetoCD.Insertar(Nombre, Apellido, Direccion, Telefono,Localidad);
+            objetoCD.Insertar(elNombre, elApellido, laDireccion, elTelefono,laLocalidad);
         }
         public void EditarClien(string ID, string Nombre, string Apellido, string Direccion, string Telefono,string Localidad)
         {

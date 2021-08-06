@@ -18,7 +18,7 @@ namespace Beta
         private string idProducto = null;
         private bool Editar = false;
         private string id;
-        private float costo = 0;
+        private string costo = "0";
         public FormProductos()
         {
             InitializeComponent();
@@ -59,6 +59,7 @@ namespace Beta
                             }
                             else
                             {
+                                costo = "0";
                                 objetoCN.InsertarPRod(txtNombre.Text, txtDesc.Text, txtMarca.Text,Convert.ToString(costo) ,txtPrecio.Text, txtStock.Text);
                                 MessageBox.Show("se inserto correctamente");
                                 MostrarProdctos();
@@ -98,7 +99,7 @@ namespace Beta
                             }
                             else
                             {
-                                objetoCN.EditarProd(txtNombre.Text, txtDesc.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, id);
+                                objetoCN.EditarProd(txtNombre.Text, txtDesc.Text, txtMarca.Text,costo , txtPrecio.Text, txtStock.Text, id);
                                 MessageBox.Show("se edito correctamente");
                                 MostrarProdctos();
                                 limpiarForm();
@@ -152,6 +153,7 @@ namespace Beta
                 txtPrecio.Text = dataGridView1.CurrentRow.Cells["Precio"].Value.ToString();
                 txtStock.Text = dataGridView1.CurrentRow.Cells["Stock"].Value.ToString();
                 id = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                costo = dataGridView1.CurrentRow.Cells["Costo"].Value.ToString();
                 btnEditar.Enabled = false;
                 btnEliminar.Enabled = false;
                 dataGridView1.Enabled = false;

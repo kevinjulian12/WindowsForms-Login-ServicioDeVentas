@@ -17,22 +17,25 @@ namespace Beta
         {
             InitializeComponent();
         }
-        CN_Ventas ventas = new CN_Ventas();
-        CN_VentasItem VentasItem = new CN_VentasItem();
+       private CN_Ventas ventas = new CN_Ventas();
+       private CN_VentasItem VentasItem = new CN_VentasItem();
 
-        public int id { get; set; }
-        public void mostrar()
-        {
-            CN_Ventas ventas = new CN_Ventas();
-            dataGridView1.DataSource = ventas.MostraHistVent(id);
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[1].Visible = false;
-        }
+        public int id;
+   
 
         private void HistorialDeComprasClientes_Load(object sender, EventArgs e)
         {
             mostrar();
         }
+
+        public void mostrar()
+        {
+            CN_Ventas _Ventas = new CN_Ventas();
+            dataGridView1.DataSource = _Ventas.MostraHistVent(id);
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].Visible = false;
+        }
+
         string NombreColumna = "";
         private void FiltrarDatosDatagridview(DataGridView datagrid, string nombre_columna, TextBox txt_buscar)
         {
@@ -57,31 +60,7 @@ namespace Beta
 
         }
 
-        //private void btnEliminar_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        if (dataGridView1.SelectedRows.Count > 0)
-        //        {
-        //            int ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value);
-        //            VentasItem.Eliminar(ID);
-        //            ventas.Eliminar(ID);
-        //            mostrar();
-        //            MessageBox.Show("Eliminado correctamente");
-
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("seleccione una fila por favor");
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
-        //        MessageBox.Show("No hay un registro seleccionado");
-        //    }
-
-        //}
-
+       
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)

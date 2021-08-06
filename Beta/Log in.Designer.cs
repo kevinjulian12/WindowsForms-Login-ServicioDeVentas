@@ -141,10 +141,10 @@
             // btnMinimizar
             // 
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.Image = global::Beta.Properties.Resources.Minimize_Icon;
+            this.btnMinimizar.Image = global::Beta.Properties.Resources.minus_regular_24__1_;
             this.btnMinimizar.Location = new System.Drawing.Point(407, 12);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(16, 16);
+            this.btnMinimizar.Size = new System.Drawing.Size(24, 24);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnMinimizar.TabIndex = 10;
             this.btnMinimizar.TabStop = false;
@@ -153,10 +153,10 @@
             // btnCerrar
             // 
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::Beta.Properties.Resources.Close_Icon;
+            this.btnCerrar.Image = global::Beta.Properties.Resources.x_regular_24__1_;
             this.btnCerrar.Location = new System.Drawing.Point(438, 12);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(16, 16);
+            this.btnCerrar.Size = new System.Drawing.Size(24, 24);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnCerrar.TabIndex = 9;
             this.btnCerrar.TabStop = false;

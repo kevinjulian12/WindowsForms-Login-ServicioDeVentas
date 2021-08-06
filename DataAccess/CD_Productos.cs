@@ -43,7 +43,21 @@ namespace DataAccess
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
-        public void Editar(string nombre, string desc, string marca, double precio, int stock, int id)
+
+        public object InsertarUsoCompras(string nombre, string desc, string marca, double costo, double precio, int stock)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            
+            comando.CommandText = "insert into Productos(Nombre , Descripcion , Marca , Costo ,Precio , Stock) values('" + nombre + "', '" + desc + "', '" + marca + "', '" + costo + "', '" + precio + "','" + stock + "'); SELECT SCOPE_IDENTITY();";
+            comando.CommandType = CommandType.Text;
+            object Idproducto;
+            Idproducto = comando.ExecuteScalar();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+            return Idproducto;
+        }
+
+        public void Editar(string nombre, string desc, string marca,double costo , double precio, int stock, int id)
         {
             comando.Connection = conexion.AbrirConexion();
             //comando.CommandText = "update Productos set Nombre='" + nombre + "',Descripcion='" + desc + "',Marca='" + marca + "',Precio='" + precio + "',Stock='"+stock+"' where ID='" + id + "'";
@@ -52,6 +66,7 @@ namespace DataAccess
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.Parameters.AddWithValue("@descrip", desc);
             comando.Parameters.AddWithValue("@Marca", marca);
+            comando.Parameters.AddWithValue("@Costo", costo);
             comando.Parameters.AddWithValue("@precio", precio);
             comando.Parameters.AddWithValue("@stock", stock);
             comando.Parameters.AddWithValue("@id", id);

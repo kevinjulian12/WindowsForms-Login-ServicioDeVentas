@@ -21,9 +21,9 @@ namespace Domain
         {
             objetoCD.Insertar(nombre, desc, marca, Convert.ToDouble(costo), Convert.ToDouble(precio), Convert.ToInt32(stock));
         }
-        public void EditarProd(string nombre, string desc, string marca, string precio, string stock, string id)
+        public void EditarProd(string nombre, string desc, string marca,string costo , string precio, string stock, string id)
         {
-            objetoCD.Editar(nombre, desc, marca, Convert.ToDouble(precio), Convert.ToInt32(stock), Convert.ToInt32(id));
+            objetoCD.Editar(nombre, desc, marca, Convert.ToDouble(costo), Convert.ToDouble(precio), Convert.ToInt32(stock), Convert.ToInt32(id));
         }
         public void EliminarPRod(string id)
         {
@@ -37,6 +37,9 @@ namespace Domain
         {
             return objetoCD.consultarStock(id);
         }
-
+        public object InsertarProductosEnCompras(string nombre, string desc, string marca, string costo, string precio, string stock)
+        {
+          return  objetoCD.InsertarUsoCompras(nombre, desc, marca, Convert.ToDouble(costo), Convert.ToDouble(precio), Convert.ToInt32(stock));
+        }
     }
 }

@@ -48,7 +48,12 @@ namespace Beta
                     }
                     else
                     {
-                        objetoCN.InsertarClien(txtnombre.Text, txtapellido.Text, txtdireccion.Text, txttelefono.Text, txtLocalidad.Text);
+                        objetoCN.Nombre = txtnombre.Text;
+                        objetoCN.Apellido = txtapellido.Text;
+                        objetoCN.Direccion = txtdireccion.Text;
+                        objetoCN.Localidad = txtLocalidad.Text;
+                        objetoCN.Telefono = txttelefono.Text;
+                        objetoCN.InsertarClien();
                         MessageBox.Show("se inserto correctamente");
                         MostrarClientes();
                         limpiarForm();

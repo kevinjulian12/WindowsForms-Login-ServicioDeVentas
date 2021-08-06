@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CN_Clientes.cs" />
+    <Compile Include="CN_Compras.cs" />
+    <Compile Include="CN_ComprasItem.cs" />
     <Compile Include="CN_Productos.cs" />
     <Compile Include="CN_Proveedor.cs" />
     <Compile Include="CN_Ventas.cs" />

@@ -101,6 +101,12 @@
     <Compile Include="FormCompras.Designer.cs">
       <DependentUpon>FormCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDetalleCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetalleCompras.Designer.cs">
+      <DependentUpon>FormDetalleCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDetalleVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCompras.resx">
       <DependentUpon>FormCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetalleCompras.resx">
+      <DependentUpon>FormDetalleCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetalleVenta.resx">
       <DependentUpon>FormDetalleVenta.cs</DependentUpon>
@@ -350,6 +359,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icono-cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fullscreen-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-fullscreen-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fullscreen-regular-blanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-regular-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus-regular-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus-regular-24 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-fullscreen-regular-24 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

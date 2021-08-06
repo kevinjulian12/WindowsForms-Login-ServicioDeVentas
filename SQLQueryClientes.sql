@@ -145,3 +145,5 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
+select Nombre,Marca,Descripcion,PrecioUnitario,Cantidad,SubTotal from ventasitems join productos on IDProducto=productos.ID where IDVenta=1
