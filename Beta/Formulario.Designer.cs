@@ -32,15 +32,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formulario));
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.iconmaximizar = new System.Windows.Forms.PictureBox();
+            this.iconrestaurar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelChildForm1 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnsalir = new System.Windows.Forms.PictureBox();
             this.SubmenuReportes = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -48,14 +54,6 @@
             this.btnrptcompra = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnrptventa = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.boton1 = new Beta.Controles.Boton();
-            this.botonUsuario = new Beta.Controles.Boton();
-            this.iconmaximizar = new System.Windows.Forms.PictureBox();
-            this.iconrestaurar = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnsalir = new System.Windows.Forms.PictureBox();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -63,25 +61,26 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.botonUsuario = new Beta.Controles.Boton();
+            this.boton1 = new Beta.Controles.Boton();
             this.panelTitulo.SuspendLayout();
-            this.panelChildForm1.SuspendLayout();
-            this.panelLogo.SuspendLayout();
-            this.panelSideMenu.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.SubmenuReportes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconrestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).BeginInit();
+            this.panelChildForm1.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelSideMenu.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).BeginInit();
+            this.SubmenuReportes.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTitulo
             // 
             this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panelTitulo.Controls.Add(this.boton1);
             this.panelTitulo.Controls.Add(this.botonUsuario);
             this.panelTitulo.Controls.Add(this.label4);
             this.panelTitulo.Controls.Add(this.iconmaximizar);
@@ -108,6 +107,59 @@
             this.label4.Text = "Inicio";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // iconmaximizar
+            // 
+            this.iconmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconmaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconmaximizar.Image = global::Beta.Properties.Resources.window_regular_24;
+            this.iconmaximizar.Location = new System.Drawing.Point(840, 8);
+            this.iconmaximizar.Name = "iconmaximizar";
+            this.iconmaximizar.Size = new System.Drawing.Size(22, 22);
+            this.iconmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconmaximizar.TabIndex = 3;
+            this.iconmaximizar.TabStop = false;
+            this.iconmaximizar.Click += new System.EventHandler(this.iconmaximizar_Click);
+            // 
+            // iconrestaurar
+            // 
+            this.iconrestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconrestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconrestaurar.Image = global::Beta.Properties.Resources.windows_regular_24;
+            this.iconrestaurar.Location = new System.Drawing.Point(838, 7);
+            this.iconrestaurar.Name = "iconrestaurar";
+            this.iconrestaurar.Size = new System.Drawing.Size(22, 22);
+            this.iconrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconrestaurar.TabIndex = 2;
+            this.iconrestaurar.TabStop = false;
+            this.iconrestaurar.Visible = false;
+            this.iconrestaurar.Click += new System.EventHandler(this.iconrestaurar_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = global::Beta.Properties.Resources.x_regular_24__1_;
+            this.btnCerrar.Location = new System.Drawing.Point(868, 7);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(24, 24);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.Image = global::Beta.Properties.Resources.minus_regular_24__1_;
+            this.btnMinimizar.Location = new System.Drawing.Point(808, 7);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(24, 24);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinimizar.TabIndex = 1;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // label1
             // 
@@ -181,10 +233,21 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Data";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Beta.Properties.Resources.icons8_lista_de_verificación_100;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(96, 96);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panelSideMenu
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelSideMenu.Controls.Add(this.boton1);
             this.panelSideMenu.Controls.Add(this.panel2);
             this.panelSideMenu.Controls.Add(this.SubmenuReportes);
             this.panelSideMenu.Controls.Add(this.btnReportes);
@@ -226,6 +289,19 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Cerrar Sension";
             this.label8.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsalir.Image = global::Beta.Properties.Resources.log_out_regular_24;
+            this.btnsalir.Location = new System.Drawing.Point(6, 9);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(45, 34);
+            this.btnsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnsalir.TabIndex = 21;
+            this.btnsalir.TabStop = false;
+            this.btnsalir.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // SubmenuReportes
             // 
@@ -315,114 +391,6 @@
             this.btnrptventa.Text = "Reporte Ventas";
             this.btnrptventa.UseVisualStyleBackColor = false;
             this.btnrptventa.Click += new System.EventHandler(this.btnrptventa_Click);
-            // 
-            // boton1
-            // 
-            this.boton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.boton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.boton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.boton1.BorderRadius = 0;
-            this.boton1.BorderSize = 0;
-            this.boton1.FlatAppearance.BorderSize = 0;
-            this.boton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton1.ForeColor = System.Drawing.Color.White;
-            this.boton1.Image = global::Beta.Properties.Resources.bell_ring_solid_24;
-            this.boton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.boton1.Location = new System.Drawing.Point(157, -4);
-            this.boton1.Name = "boton1";
-            this.boton1.Size = new System.Drawing.Size(150, 40);
-            this.boton1.TabIndex = 20;
-            this.boton1.Text = "boton1";
-            this.boton1.TextColor = System.Drawing.Color.White;
-            this.boton1.UseVisualStyleBackColor = false;
-            this.boton1.Click += new System.EventHandler(this.boton1_Click);
-            // 
-            // botonUsuario
-            // 
-            this.botonUsuario.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.botonUsuario.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            this.botonUsuario.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.botonUsuario.BorderRadius = 13;
-            this.botonUsuario.BorderSize = 1;
-            this.botonUsuario.FlatAppearance.BorderSize = 0;
-            this.botonUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonUsuario.ForeColor = System.Drawing.Color.White;
-            this.botonUsuario.Image = global::Beta.Properties.Resources.user_circle_solid_24;
-            this.botonUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botonUsuario.Location = new System.Drawing.Point(6, 3);
-            this.botonUsuario.Name = "botonUsuario";
-            this.botonUsuario.Size = new System.Drawing.Size(122, 27);
-            this.botonUsuario.TabIndex = 19;
-            this.botonUsuario.Text = "Usuario";
-            this.botonUsuario.TextColor = System.Drawing.Color.White;
-            this.botonUsuario.UseVisualStyleBackColor = false;
-            this.botonUsuario.Click += new System.EventHandler(this.botonUsuario_Click_1);
-            // 
-            // iconmaximizar
-            // 
-            this.iconmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconmaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconmaximizar.Image = global::Beta.Properties.Resources.window_regular_24;
-            this.iconmaximizar.Location = new System.Drawing.Point(840, 8);
-            this.iconmaximizar.Name = "iconmaximizar";
-            this.iconmaximizar.Size = new System.Drawing.Size(22, 22);
-            this.iconmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.iconmaximizar.TabIndex = 3;
-            this.iconmaximizar.TabStop = false;
-            this.iconmaximizar.Click += new System.EventHandler(this.iconmaximizar_Click);
-            // 
-            // iconrestaurar
-            // 
-            this.iconrestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconrestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconrestaurar.Image = global::Beta.Properties.Resources.windows_regular_24;
-            this.iconrestaurar.Location = new System.Drawing.Point(838, 7);
-            this.iconrestaurar.Name = "iconrestaurar";
-            this.iconrestaurar.Size = new System.Drawing.Size(22, 22);
-            this.iconrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.iconrestaurar.TabIndex = 2;
-            this.iconrestaurar.TabStop = false;
-            this.iconrestaurar.Visible = false;
-            this.iconrestaurar.Click += new System.EventHandler(this.iconrestaurar_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::Beta.Properties.Resources.x_regular_24__1_;
-            this.btnCerrar.Location = new System.Drawing.Point(868, 7);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(24, 24);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.Image = global::Beta.Properties.Resources.minus_regular_24__1_;
-            this.btnMinimizar.Location = new System.Drawing.Point(808, 7);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(24, 24);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnMinimizar.TabIndex = 1;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnsalir
-            // 
-            this.btnsalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnsalir.Image = global::Beta.Properties.Resources.log_out_regular_24;
-            this.btnsalir.Location = new System.Drawing.Point(6, 9);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(45, 34);
-            this.btnsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnsalir.TabIndex = 21;
-            this.btnsalir.TabStop = false;
-            this.btnsalir.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnReportes
             // 
@@ -564,15 +532,50 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.btnVentas_Click);
             // 
-            // pictureBox1
+            // botonUsuario
             // 
-            this.pictureBox1.Image = global::Beta.Properties.Resources.icons8_lista_de_verificación_100;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 96);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.botonUsuario.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.botonUsuario.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.botonUsuario.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.botonUsuario.BorderRadius = 13;
+            this.botonUsuario.BorderSize = 1;
+            this.botonUsuario.FlatAppearance.BorderSize = 0;
+            this.botonUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonUsuario.ForeColor = System.Drawing.Color.White;
+            this.botonUsuario.Image = global::Beta.Properties.Resources.user_circle_solid_24;
+            this.botonUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botonUsuario.Location = new System.Drawing.Point(6, 3);
+            this.botonUsuario.Name = "botonUsuario";
+            this.botonUsuario.Size = new System.Drawing.Size(122, 27);
+            this.botonUsuario.TabIndex = 19;
+            this.botonUsuario.Text = "Usuario";
+            this.botonUsuario.TextColor = System.Drawing.Color.White;
+            this.botonUsuario.UseVisualStyleBackColor = false;
+            this.botonUsuario.Click += new System.EventHandler(this.botonUsuario_Click_1);
+            // 
+            // boton1
+            // 
+            this.boton1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.boton1.BackgroundColor = System.Drawing.Color.DarkSlateBlue;
+            this.boton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.boton1.BorderRadius = 0;
+            this.boton1.BorderSize = 0;
+            this.boton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.boton1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.boton1.FlatAppearance.BorderSize = 0;
+            this.boton1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.boton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton1.ForeColor = System.Drawing.Color.White;
+            this.boton1.Image = global::Beta.Properties.Resources.bell_ring_solid_24;
+            this.boton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.boton1.Location = new System.Drawing.Point(0, 510);
+            this.boton1.Name = "boton1";
+            this.boton1.Size = new System.Drawing.Size(228, 40);
+            this.boton1.TabIndex = 40;
+            this.boton1.Text = "boton1";
+            this.boton1.TextColor = System.Drawing.Color.White;
+            this.boton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.boton1.UseVisualStyleBackColor = false;
             // 
             // Formulario
             // 
@@ -593,19 +596,19 @@
             this.Load += new System.EventHandler(this.Formulario_Load);
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
-            this.panelChildForm1.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
-            this.panelLogo.PerformLayout();
-            this.panelSideMenu.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.SubmenuReportes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconmaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconrestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).EndInit();
+            this.panelChildForm1.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelSideMenu.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).EndInit();
+            this.SubmenuReportes.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

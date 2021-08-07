@@ -1,5 +1,6 @@
 ﻿using Domain;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Beta
@@ -60,6 +61,8 @@ namespace Beta
                     dataGridView1.DataSource = "";
                     limpiarFormCliente();
                     MessageBox.Show("se inserto correctamente");
+                    Formulario f = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
+                    f.LoadUserData();
                 }
             }
         }

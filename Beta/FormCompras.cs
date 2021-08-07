@@ -161,37 +161,46 @@ namespace Beta
             }
             else
             {
-                DateTime hora = DateTime.Today;
-                float total = Convert.ToSingle(labelTotal.Text);
-                var idCompra = compras.InsertarCompra(Convert.ToInt32(idProveedor), hora, total);
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+                if (dataGridView1.RowCount == 0)
                 {
-                    if (row.Cells[0].Value != null)
-                    {
-                      comprasItem.InsertarItems(Convert.ToInt32(idCompra),
-                                            Convert.ToInt32(row.Cells[0].Value),
-                                            Convert.ToSingle(row.Cells[4].Value),
-                                            Convert.ToSingle(row.Cells[5].Value),
-                                            Convert.ToInt32(row.Cells[6].Value),
-                                            Convert.ToSingle(row.Cells[7].Value));
-                        Productos.EditarProd(Convert.ToString(row.Cells[1].Value), Convert.ToString(row.Cells[2].Value), Convert.ToString(row.Cells[3].Value), Convert.ToString(row.Cells[4].Value), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[0].Value));
-                    }
-                    else
-                    {
-                      var _idProducto=  Productos.InsertarProductosEnCompras(Convert.ToString(row.Cells[1].Value), Convert.ToString(row.Cells[2].Value), Convert.ToString(row.Cells[3].Value), Convert.ToString(row.Cells[4].Value), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[6].Value));
-
-                        comprasItem.InsertarItems(Convert.ToInt32(idCompra),
-                                            Convert.ToInt32(_idProducto),
-                                            Convert.ToSingle(row.Cells[4].Value),
-                                            Convert.ToSingle(row.Cells[5].Value),
-                                            Convert.ToInt32(row.Cells[6].Value),
-                                            Convert.ToSingle(row.Cells[7].Value));
-                        
-                    }
+                    MessageBox.Show("No hay productos");
                 }
-                dataGridView1.DataSource = "";
-                limpiarFormProveedor();
-                MessageBox.Show("se inserto correctamente");
+                else
+                {
+                    DateTime hora = DateTime.Today;
+                    float total = Convert.ToSingle(labelTotal.Text);
+                    var idCompra = compras.InsertarCompra(Convert.ToInt32(idProveedor), hora, total);
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (row.Cells[0].Value != null)
+                        {
+                            comprasItem.InsertarItems(Convert.ToInt32(idCompra),
+                                                  Convert.ToInt32(row.Cells[0].Value),
+                                                  Convert.ToSingle(row.Cells[4].Value),
+                                                  Convert.ToSingle(row.Cells[5].Value),
+                                                  Convert.ToInt32(row.Cells[6].Value),
+                                                  Convert.ToSingle(row.Cells[7].Value));
+                            Productos.EditarProd(Convert.ToString(row.Cells[1].Value), Convert.ToString(row.Cells[2].Value), Convert.ToString(row.Cells[3].Value), Convert.ToString(row.Cells[4].Value), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[0].Value));
+                        }
+                        else
+                        {
+                            var _idProducto = Productos.InsertarProductosEnCompras(Convert.ToString(row.Cells[1].Value), Convert.ToString(row.Cells[2].Value), Convert.ToString(row.Cells[3].Value), Convert.ToString(row.Cells[4].Value), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[6].Value));
+
+                            comprasItem.InsertarItems(Convert.ToInt32(idCompra),
+                                                Convert.ToInt32(_idProducto),
+                                                Convert.ToSingle(row.Cells[4].Value),
+                                                Convert.ToSingle(row.Cells[5].Value),
+                                                Convert.ToInt32(row.Cells[6].Value),
+                                                Convert.ToSingle(row.Cells[7].Value));
+
+                        }
+                    }
+                    dataGridView1.DataSource = "";
+                    limpiarFormProveedor();
+                    MessageBox.Show("se inserto correctamente");
+                    Formulario f = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
+                    f.LoadUserData();
+                }
             }
         }
     }

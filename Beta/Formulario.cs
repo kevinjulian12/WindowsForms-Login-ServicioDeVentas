@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Domain;
+using System.Data;
 
 namespace Beta
 {
@@ -264,14 +265,26 @@ namespace Beta
         public void LoadUserData()
         {
             CN_Productos productos = new CN_Productos();
-            int stock = 0;
-           //if ()
-           //{
-           //   // var stock +Convert.ToInt32(productos.consultarStock2().Rows);
-           //}
-
-            boton1.Text = Convert.ToString( stock);
-            botonUsuario.Text = UserCache.LoginName;
+            int FaltaStock = 0;
+            foreach (DataRow item in productos.consultarStock2().Rows)
+            {
+                var cellValue =Convert.ToInt32( item[0]);
+                if (cellValue < 3)
+                {
+                    FaltaStock += 1;
+                }
+            }
+            if (FaltaStock>0)
+            {
+                boton1.Text = "Notificaciones " + Convert.ToString(FaltaStock);
+                botonUsuario.Text = UserCache.LoginName;
+            }
+            else
+            {
+                boton1.Text = "Notificaciones";
+                botonUsuario.Text = UserCache.LoginName;
+            }
+            
            
         }
 
