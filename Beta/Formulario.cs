@@ -20,6 +20,7 @@ namespace Beta
         {
             LoadUserData();           
             privilegio();
+            dropdownMenu1.IsMainMenu = true;
         }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -256,28 +257,32 @@ namespace Beta
             label4.Text = "Mi Perfil";
         }
 
-        private void boton1_Click(object sender, EventArgs e)
-        {
-            
+       
 
+        private void boton1_Click_1(object sender, EventArgs e)
+        {
+            dropdownMenu1.Show(boton1, boton1.Width, 0);
         }
 
         public void LoadUserData()
         {
             CN_Productos productos = new CN_Productos();
             int FaltaStock = 0;
-            foreach (DataRow item in productos.consultarStock2().Rows)
+            dropdownMenu1.Items.Clear();
+            foreach (DataRow item in productos.NotificacionStock().Rows)
             {
                 var cellValue =Convert.ToInt32( item[0]);
                 if (cellValue < 3)
                 {
                     FaltaStock += 1;
+                    dropdownMenu1.Items.Add("Tiene stock bajo del producto "+ item[1]+" de "+ item[2]+" marca "+ item[3]+".");
                 }
             }
             if (FaltaStock>0)
             {
                 boton1.Text = "Notificaciones " + Convert.ToString(FaltaStock);
                 botonUsuario.Text = UserCache.LoginName;
+                
             }
             else
             {

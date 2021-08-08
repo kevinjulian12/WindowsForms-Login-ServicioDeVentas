@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formulario));
             this.panelTitulo = new System.Windows.Forms.Panel();
+            this.botonUsuario = new Beta.Controles.Boton();
             this.label4 = new System.Windows.Forms.Label();
             this.iconmaximizar = new System.Windows.Forms.PictureBox();
             this.iconrestaurar = new System.Windows.Forms.PictureBox();
@@ -44,6 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.boton1 = new Beta.Controles.Boton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.btnsalir = new System.Windows.Forms.PictureBox();
@@ -62,8 +64,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.botonUsuario = new Beta.Controles.Boton();
-            this.boton1 = new Beta.Controles.Boton();
+            this.dropdownMenu1 = new Beta.Controles.DropdownMenu(this.components);
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconrestaurar)).BeginInit();
@@ -93,6 +94,27 @@
             this.panelTitulo.Size = new System.Drawing.Size(898, 44);
             this.panelTitulo.TabIndex = 4;
             this.panelTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // botonUsuario
+            // 
+            this.botonUsuario.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.botonUsuario.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.botonUsuario.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.botonUsuario.BorderRadius = 13;
+            this.botonUsuario.BorderSize = 1;
+            this.botonUsuario.FlatAppearance.BorderSize = 0;
+            this.botonUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonUsuario.ForeColor = System.Drawing.Color.White;
+            this.botonUsuario.Image = global::Beta.Properties.Resources.user_circle_solid_24;
+            this.botonUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botonUsuario.Location = new System.Drawing.Point(6, 3);
+            this.botonUsuario.Name = "botonUsuario";
+            this.botonUsuario.Size = new System.Drawing.Size(122, 27);
+            this.botonUsuario.TabIndex = 19;
+            this.botonUsuario.Text = "Usuario";
+            this.botonUsuario.TextColor = System.Drawing.Color.White;
+            this.botonUsuario.UseVisualStyleBackColor = false;
+            this.botonUsuario.Click += new System.EventHandler(this.botonUsuario_Click_1);
             // 
             // label4
             // 
@@ -263,6 +285,31 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(228, 600);
             this.panelSideMenu.TabIndex = 2;
+            // 
+            // boton1
+            // 
+            this.boton1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.boton1.BackgroundColor = System.Drawing.Color.DarkSlateBlue;
+            this.boton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.boton1.BorderRadius = 0;
+            this.boton1.BorderSize = 0;
+            this.boton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.boton1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.boton1.FlatAppearance.BorderSize = 0;
+            this.boton1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.boton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton1.ForeColor = System.Drawing.Color.White;
+            this.boton1.Image = global::Beta.Properties.Resources.bell_ring_solid_24;
+            this.boton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.boton1.Location = new System.Drawing.Point(0, 510);
+            this.boton1.Name = "boton1";
+            this.boton1.Size = new System.Drawing.Size(228, 40);
+            this.boton1.TabIndex = 40;
+            this.boton1.Text = "boton1";
+            this.boton1.TextColor = System.Drawing.Color.White;
+            this.boton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.boton1.UseVisualStyleBackColor = false;
+            this.boton1.Click += new System.EventHandler(this.boton1_Click_1);
             // 
             // panel2
             // 
@@ -532,50 +579,14 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.btnVentas_Click);
             // 
-            // botonUsuario
+            // dropdownMenu1
             // 
-            this.botonUsuario.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.botonUsuario.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            this.botonUsuario.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.botonUsuario.BorderRadius = 13;
-            this.botonUsuario.BorderSize = 1;
-            this.botonUsuario.FlatAppearance.BorderSize = 0;
-            this.botonUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonUsuario.ForeColor = System.Drawing.Color.White;
-            this.botonUsuario.Image = global::Beta.Properties.Resources.user_circle_solid_24;
-            this.botonUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botonUsuario.Location = new System.Drawing.Point(6, 3);
-            this.botonUsuario.Name = "botonUsuario";
-            this.botonUsuario.Size = new System.Drawing.Size(122, 27);
-            this.botonUsuario.TabIndex = 19;
-            this.botonUsuario.Text = "Usuario";
-            this.botonUsuario.TextColor = System.Drawing.Color.White;
-            this.botonUsuario.UseVisualStyleBackColor = false;
-            this.botonUsuario.Click += new System.EventHandler(this.botonUsuario_Click_1);
-            // 
-            // boton1
-            // 
-            this.boton1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.boton1.BackgroundColor = System.Drawing.Color.DarkSlateBlue;
-            this.boton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.boton1.BorderRadius = 0;
-            this.boton1.BorderSize = 0;
-            this.boton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.boton1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.boton1.FlatAppearance.BorderSize = 0;
-            this.boton1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.boton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton1.ForeColor = System.Drawing.Color.White;
-            this.boton1.Image = global::Beta.Properties.Resources.bell_ring_solid_24;
-            this.boton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.boton1.Location = new System.Drawing.Point(0, 510);
-            this.boton1.Name = "boton1";
-            this.boton1.Size = new System.Drawing.Size(228, 40);
-            this.boton1.TabIndex = 40;
-            this.boton1.Text = "boton1";
-            this.boton1.TextColor = System.Drawing.Color.White;
-            this.boton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.boton1.UseVisualStyleBackColor = false;
+            this.dropdownMenu1.IsMainMenu = false;
+            this.dropdownMenu1.MenuItemHeight = 25;
+            this.dropdownMenu1.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.dropdownMenu1.Name = "dropdownMenu1";
+            this.dropdownMenu1.PrimaryColor = System.Drawing.Color.Empty;
+            this.dropdownMenu1.Size = new System.Drawing.Size(181, 26);
             // 
             // Formulario
             // 
@@ -651,5 +662,6 @@
         private System.Windows.Forms.Label label8;
         private Controles.Boton botonUsuario;
         private Controles.Boton boton1;
+        private Controles.DropdownMenu dropdownMenu1;
     }
 }

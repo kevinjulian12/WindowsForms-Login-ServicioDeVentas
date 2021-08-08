@@ -17,10 +17,10 @@ namespace Domain
             tabla = objetoCD.Mostrar();
             return tabla;
         }
-        public DataTable consultarStock2()
+        public DataTable NotificacionStock()
         {
             DataTable tabla = new DataTable();
-            tabla = objetoCD.consultarStock2();
+            tabla = objetoCD.NotificacionStock();
             return tabla;
             
         }

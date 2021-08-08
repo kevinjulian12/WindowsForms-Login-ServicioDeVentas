@@ -158,9 +158,10 @@
             this.txtPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.Size = new System.Drawing.Size(256, 32);
-            this.txtPassword.TabIndex = 14;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.Texts = "";
             this.txtPassword.UnderlinedStyle = false;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // txtUsername
             // 
@@ -180,9 +181,10 @@
             this.txtUsername.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUsername.PlaceholderText = "";
             this.txtUsername.Size = new System.Drawing.Size(256, 32);
-            this.txtUsername.TabIndex = 13;
+            this.txtUsername.TabIndex = 1;
             this.txtUsername.Texts = "";
             this.txtUsername.UnderlinedStyle = false;
+            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
             // 
             // login
             // 

@@ -23,6 +23,9 @@ namespace Beta
         {
             InitializeComponent();
             btnCancelar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnGuardar.Enabled = false;
         }
         private void FormProductos_Load(object sender, EventArgs e)
         {
@@ -41,32 +44,34 @@ namespace Beta
             {
                 try
                 {
-                    if (txtPrecio.TextLength == 0)
+                    if (txtPrecio.Texts.Length == 0)
                     {
                         MessageBox.Show("Ingrese un valor a precio");
                     }
                     else
                     {
-                        if (txtStock.TextLength == 0)
+                        if (txtStock.Texts.Length == 0)
                         {
                             MessageBox.Show("Ingrese un valor a stock");
                         }
                         else
                         {
-                            if (txtMarca.TextLength==0 || txtNombre.TextLength==0 || txtDesc.TextLength==0)
+                            if (txtMarca.Texts.Length == 0 || txtNombre.Texts.Length == 0 || txtDesc.Texts.Length == 0)
                             {
                                 MessageBox.Show("Complete todos los campos");
                             }
                             else
                             {
                                 costo = "0";
-                                objetoCN.InsertarPRod(txtNombre.Text, txtDesc.Text, txtMarca.Text,Convert.ToString(costo) ,txtPrecio.Text, txtStock.Text);
+                                objetoCN.InsertarPRod(txtNombre.Texts, txtDesc.Texts, txtMarca.Texts,Convert.ToString(costo) ,txtPrecio.Texts, txtStock.Texts);
                                 MessageBox.Show("se inserto correctamente");
                                 MostrarProdctos();
                                 limpiarForm();
                                 textBox1.Enabled = false;
                                 textBox1.Clear();
                                 label6.Visible = true;
+                                Formulario f = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
+                                f.LoadUserData();
                             }
                         }
                     }
@@ -81,25 +86,25 @@ namespace Beta
             {
                 try
                 {
-                    if (txtPrecio.TextLength == 0)
+                    if (txtPrecio.Texts.Length == 0)
                     {
                         MessageBox.Show("Ingrese un valor a precio");
                     }
                     else
                     {
-                        if (txtStock.TextLength == 0)
+                        if (txtStock.Texts.Length == 0)
                         {
                             MessageBox.Show("Ingrese un valor a stock");
                         }
                         else
                         {
-                            if (txtMarca.TextLength == 0 || txtNombre.TextLength == 0 || txtDesc.TextLength == 0)
+                            if (txtMarca.Texts.Length == 0 || txtNombre.Texts.Length == 0 || txtDesc.Texts.Length == 0)
                             {
                                 MessageBox.Show("Complete todos los campos");
                             }
                             else
                             {
-                                objetoCN.EditarProd(txtNombre.Text, txtDesc.Text, txtMarca.Text,costo , txtPrecio.Text, txtStock.Text, id);
+                                objetoCN.EditarProd(txtNombre.Texts, txtDesc.Texts, txtMarca.Texts,costo , txtPrecio.Texts, txtStock.Texts, id);
                                 MessageBox.Show("se edito correctamente");
                                 MostrarProdctos();
                                 limpiarForm();
@@ -109,6 +114,8 @@ namespace Beta
                                 textBox1.Enabled = false;
                                 textBox1.Clear();
                                 label6.Visible = true;
+                                Formulario f = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
+                                f.LoadUserData();
                             }
                         }
                     }
@@ -132,14 +139,18 @@ namespace Beta
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
+                return;
             }
 
             // Si deseas, puedes permitir numeros decimales (o float)
             // If you want, you can allow decimal (float) numbers
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
+                return;
             }
         }
         private void btnEditar_Click(object sender, EventArgs e)
@@ -147,28 +158,29 @@ namespace Beta
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 Editar = true;
-                txtNombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
-                txtMarca.Text = dataGridView1.CurrentRow.Cells["Marca"].Value.ToString();
-                txtDesc.Text = dataGridView1.CurrentRow.Cells["Descripcion"].Value.ToString();
-                txtPrecio.Text = dataGridView1.CurrentRow.Cells["Precio"].Value.ToString();
-                txtStock.Text = dataGridView1.CurrentRow.Cells["Stock"].Value.ToString();
+                txtNombre.Texts = dataGridView1.CurrentRow.Cells["Producto"].Value.ToString();
+                txtMarca.Texts = dataGridView1.CurrentRow.Cells["Marca"].Value.ToString();
+                txtDesc.Texts = dataGridView1.CurrentRow.Cells["Descripcion"].Value.ToString();
+                txtPrecio.Texts = dataGridView1.CurrentRow.Cells["Precio"].Value.ToString();
+                txtStock.Texts = dataGridView1.CurrentRow.Cells["Stock"].Value.ToString();
                 id = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                 costo = dataGridView1.CurrentRow.Cells["Costo"].Value.ToString();
                 btnEditar.Enabled = false;
                 btnEliminar.Enabled = false;
                 dataGridView1.Enabled = false;
                 btnCancelar.Enabled = true;
+
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
         }
         private void limpiarForm()
         {
-            txtDesc.Clear();
-            txtMarca.Text = "";
-            txtPrecio.Clear();
-            txtStock.Clear();
-            txtNombre.Clear();           
+            txtDesc.Texts = "";
+            txtMarca.Texts = "";
+            txtPrecio.Texts = "";
+            txtStock.Texts = "";
+            txtNombre.Texts = "";
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -184,6 +196,8 @@ namespace Beta
                 textBox1.Enabled = false;
                 textBox1.Clear();
                 label6.Visible = true;
+                Formulario f = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
+                f.LoadUserData();
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
@@ -191,7 +205,7 @@ namespace Beta
 
         private void Activar_Guardar(object sender, EventArgs e)
         {
-            if (txtDesc.Text == "" && txtMarca.Text == "" && txtNombre.Text == "" && txtPrecio.Text == "" && txtStock.Text == "")
+            if (txtDesc.Texts == "" && txtMarca.Texts == "" && txtNombre.Texts == "" && txtPrecio.Texts == "" && txtStock.Texts == "")
             {
                 btnGuardar.Enabled = false;
             }

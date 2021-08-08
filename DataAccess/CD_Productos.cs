@@ -48,7 +48,7 @@ namespace DataAccess
         {
             comando.Connection = conexion.AbrirConexion();
             
-            comando.CommandText = "insert into Productos(Nombre , Descripcion , Marca , Costo ,Precio , Stock) values('" + nombre + "', '" + desc + "', '" + marca + "', '" + costo + "', '" + precio + "','" + stock + "'); SELECT SCOPE_IDENTITY();";
+            comando.CommandText = "insert into Productos(Producto , Descripcion , Marca , Costo ,Precio , Stock) values('" + nombre + "', '" + desc + "', '" + marca + "', '" + costo + "', '" + precio + "','" + stock + "'); SELECT SCOPE_IDENTITY();";
             comando.CommandType = CommandType.Text;
             object Idproducto;
             Idproducto = comando.ExecuteScalar();
@@ -110,10 +110,10 @@ namespace DataAccess
             return stock;
         }
 
-        public DataTable consultarStock2()
+        public DataTable NotificacionStock()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select Stock from Productos ";
+            comando.CommandText = "select Stock,Producto,Descripcion,Marca from Productos ";
             comando.CommandType = CommandType.Text;
             leer = comando.ExecuteReader();
             tabla.Load(leer);

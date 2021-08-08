@@ -16,7 +16,15 @@ namespace Beta
         {
             InitializeComponent();
         }
+private void Pagos_Load(object sender, EventArgs e)
+        {
+            dropdownMenu1.IsMainMenu = true;
+        }
 
-      
+
+        private void boton1_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

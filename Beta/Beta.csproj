@@ -91,6 +91,11 @@
     <Compile Include="Controles\Button.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controles\DropdownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\MenuColorTable.cs" />
+    <Compile Include="Controles\MenuRenderer.cs" />
     <Compile Include="Controles\TextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>

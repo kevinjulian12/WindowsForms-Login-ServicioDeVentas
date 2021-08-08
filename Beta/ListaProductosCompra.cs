@@ -23,7 +23,7 @@ namespace Beta
             {
                 FormCompras compras = Application.OpenForms.OfType<FormCompras>().SingleOrDefault();
                 compras.idProducto = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
-                compras.txtCategoria.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
+                compras.txtCategoria.Text = dataGridView1.CurrentRow.Cells["Producto"].Value.ToString();
                 compras.txtDescripcion.Text= dataGridView1.CurrentRow.Cells["Descripcion"].Value.ToString();
                 compras.txtMarca.Text = dataGridView1.CurrentRow.Cells["Marca"].Value.ToString();
                 compras.txtPrecio.Text = dataGridView1.CurrentRow.Cells["Precio"].Value.ToString();
