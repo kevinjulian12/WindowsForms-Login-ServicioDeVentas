@@ -33,7 +33,11 @@ namespace Domain
         {
             Ventas.EliminarHist(idVenta);
         }
-       
+
+       public DataTable Los5ProductosMasVendidos()
+        {
+            return Ventas.Los5ProductosMasVendidos();
+        }
     
     }
 }

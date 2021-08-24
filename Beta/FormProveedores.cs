@@ -21,6 +21,10 @@ namespace Beta
         {
             InitializeComponent();
             btnCancelar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnGuardar.Enabled = false;
+            btnCompras.Enabled = false;
         }
         private void FormProductos_Load(object sender, EventArgs e)
         {
@@ -39,13 +43,13 @@ namespace Beta
             {
                 try
                 {
-                    if (txtDireccion.TextLength < 3 ||txtEmail.TextLength < 3 || txtnombre.TextLength < 3 || txtRazonSocial.TextLength < 3 || txtTelefono.TextLength < 6 || txtReferencia.TextLength < 3)
+                    if (txtDireccion.Texts.Length < 3 ||txtEmail.Texts.Length < 3 || txtnombre.Texts.Length < 3 || txtRazonSocial.Texts.Length < 3 || txtTelefono.Texts.Length < 6 || txtReferencia.Texts.Length < 3)
                     {
                         MessageBox.Show("Complete todos los campos, deben tener como minimo 3 caracter y telefono minimo de 6 caracter");
                     }
                     else
                     {
-                        objetoCN.InsertarPRov(txtnombre.Text, txtRazonSocial.Text, txtDireccion.Text, txtTelefono.Text, txtReferencia.Text, txtEmail.Text);
+                        objetoCN.InsertarPRov(txtnombre.Texts, txtRazonSocial.Texts, txtDireccion.Texts, txtTelefono.Texts, txtReferencia.Texts, txtEmail.Texts);
                         MessageBox.Show("se inserto correctamente");
                         MostrarProveedor();
                         limpiarForm();
@@ -64,13 +68,13 @@ namespace Beta
             {
                 try
                 {
-                    if (txtDireccion.TextLength < 3 || txtEmail.TextLength < 3 || txtnombre.TextLength < 3 || txtRazonSocial.TextLength < 3 || txtTelefono.TextLength < 6 || txtReferencia.TextLength < 3)
+                    if (txtDireccion.Texts.Length < 3 || txtEmail.Texts.Length < 3 || txtnombre.Texts.Length < 3 || txtRazonSocial.Texts.Length < 3 || txtTelefono.Texts.Length < 6 || txtReferencia.Texts.Length < 3)
                     {
                         MessageBox.Show("Complete todos los campos, deben tener como minimo 3 caracter y telefono minimo de 6 caracter");
                     }
                     else
                     {
-                        objetoCN.EditarProv(id, txtnombre.Text, txtRazonSocial.Text, txtDireccion.Text, txtTelefono.Text, txtReferencia.Text, txtEmail.Text);
+                        objetoCN.EditarProv(id, txtnombre.Texts, txtRazonSocial.Texts, txtDireccion.Texts, txtTelefono.Texts, txtReferencia.Texts, txtEmail.Texts);
                         MessageBox.Show("se edito correctamente");
                         MostrarProveedor();
                         limpiarForm();
@@ -102,12 +106,12 @@ namespace Beta
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 Editar = true;
-                txtnombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
-                txtRazonSocial.Text = dataGridView1.CurrentRow.Cells["Razon_Social"].Value.ToString();
-                txtDireccion.Text = dataGridView1.CurrentRow.Cells["Direccion"].Value.ToString();
-                txtTelefono.Text = dataGridView1.CurrentRow.Cells["Telefono"].Value.ToString();
-                txtReferencia.Text = dataGridView1.CurrentRow.Cells["Referencia"].Value.ToString();
-                txtEmail.Text = dataGridView1.CurrentRow.Cells["Email"].Value.ToString();
+                txtnombre.Texts = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
+                txtRazonSocial.Texts = dataGridView1.CurrentRow.Cells["Razon_Social"].Value.ToString();
+                txtDireccion.Texts = dataGridView1.CurrentRow.Cells["Direccion"].Value.ToString();
+                txtTelefono.Texts = dataGridView1.CurrentRow.Cells["Telefono"].Value.ToString();
+                txtReferencia.Texts = dataGridView1.CurrentRow.Cells["Referencia"].Value.ToString();
+                txtEmail.Texts = dataGridView1.CurrentRow.Cells["Email"].Value.ToString();
                 id = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
                 btnEditar.Enabled = false;
                 btnEliminar.Enabled = false;
@@ -119,12 +123,12 @@ namespace Beta
         }
         private void limpiarForm()
         {
-            txtRazonSocial.Clear();
-            txtDireccion.Text = "";
-            txtTelefono.Clear();
-            txtReferencia.Clear();
-            txtnombre.Clear();
-            txtEmail.Clear();
+            txtRazonSocial.Texts = "";
+            txtDireccion.Texts = "";
+            txtTelefono.Texts = "";
+            txtReferencia.Texts = "";
+            txtnombre.Texts = "";
+            txtEmail.Texts = "";
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -202,7 +206,7 @@ namespace Beta
         }
         private void Activar_Guardar(object sender, EventArgs e)
         {
-            if (txtRazonSocial.Text == "" && txtDireccion.Text == "" && txtReferencia.Text == "" && txtnombre.Text == "" && txtTelefono.Text == ""&& txtEmail.Text=="")
+            if (txtRazonSocial.Texts == "" && txtDireccion.Texts == "" && txtReferencia.Texts == "" && txtnombre.Texts == "" && txtTelefono.Texts == ""&& txtEmail.Texts=="")
             {
                 btnGuardar.Enabled = false;
             }
@@ -219,5 +223,6 @@ namespace Beta
             historialProveedor.id= Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value);
             historialProveedor.ShowDialog();
         }
+
     }
 }

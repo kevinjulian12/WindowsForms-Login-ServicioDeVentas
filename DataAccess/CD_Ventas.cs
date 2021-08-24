@@ -37,6 +37,21 @@ namespace DataAccess
             return tabla;
         }
 
+        public DataTable Los5ProductosMasVendidos()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "Select Top 5 P.Producto+' '+p.Marca +' '+P.DESCRIPCION as Producto , COUNT(IDProducto ) AS nroVentas " +
+                "from ventasitems " +
+                "inner join PRODUCTOS AS P ON P.ID = ventasitems.IDProducto " +
+                "Group by IDProducto,P.DESCRIPCION,p.Producto,p.Marca " +
+                "Order by count(5) desc ";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+        }
+
         public object Insertar(int Idcliente,DateTime fecha,float total) {
             comando.Connection = conexion.AbrirConexion();
             string total1 = total.ToString().Replace(',', '.');
