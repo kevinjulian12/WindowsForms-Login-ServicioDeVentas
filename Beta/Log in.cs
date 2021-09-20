@@ -27,7 +27,7 @@ namespace Beta
             {
                 if (encryptHelper.Sha256Encrypt(txtPassword.Texts) != "Password")
                 {
-                    UserModel user = new UserModel();
+                    CN_Usuario user = new CN_Usuario();
                     var validLogin = user.LoginUser(txtUsername.Texts, txtPassword.Texts);
                     if (validLogin == true)
                     {

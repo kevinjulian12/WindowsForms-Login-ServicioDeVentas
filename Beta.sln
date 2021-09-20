@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1169
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beta", "Beta\Beta.csproj", "{C14CD400-ECDC-4677-918D-51951B1E6B90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "Beta\CapaPresentacion.csproj", "{C14CD400-ECDC-4677-918D-51951B1E6B90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{024405EB-7066-47FC-B5A3-8B678D0947D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "Domain\CapaNegocio.csproj", "{024405EB-7066-47FC-B5A3-8B678D0947D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{26075ABC-E356-4B97-AD5F-C9454965459E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "DataAccess\CapaDatos.csproj", "{26075ABC-E356-4B97-AD5F-C9454965459E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{1DD44F43-E14A-4BE0-A4F9-F41F86D451A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaSoporte", "Common\CapaSoporte.csproj", "{1DD44F43-E14A-4BE0-A4F9-F41F86D451A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

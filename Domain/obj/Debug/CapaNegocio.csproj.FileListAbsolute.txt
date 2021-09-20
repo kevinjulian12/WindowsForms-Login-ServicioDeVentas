@@ -1,0 +1,12 @@
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\bin\Debug\Domain.dll
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\bin\Debug\Domain.pdb
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\bin\Debug\Common.dll
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\bin\Debug\DataAccess.dll
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\bin\Debug\MySql.Data.dll
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\bin\Debug\Common.pdb
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\bin\Debug\DataAccess.pdb
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\obj\Debug\CapaNegocio.csproj.CopyComplete
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\obj\Debug\Domain.dll
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\obj\Debug\Domain.pdb

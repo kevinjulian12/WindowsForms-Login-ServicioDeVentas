@@ -281,13 +281,13 @@ namespace Beta
             if (FaltaStock>0)
             {
                 boton1.Text = "Notificaciones " + Convert.ToString(FaltaStock);
-                botonUsuario.Text = UserCache.LoginName;
+                botonUsuario.Text = UsuarioDTO.LoginName;
                 
             }
             else
             {
                 boton1.Text = "Notificaciones";
-                botonUsuario.Text = UserCache.LoginName;
+                botonUsuario.Text = UsuarioDTO.LoginName;
             }
             
            
@@ -295,7 +295,7 @@ namespace Beta
 
         private void privilegio()
         {
-            if(UserCache.Position != "Administrator") {
+            if(UsuarioDTO.Position != "Administrator") {
                 btnProductos.Enabled = false;
                 btnReportes.Enabled = false;
                 btnrptcompra.Enabled = false;

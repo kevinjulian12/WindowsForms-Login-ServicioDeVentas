@@ -12,7 +12,7 @@ namespace DataAccess
         private readonly string connectionString;
         public ConnectionToMySql()
         {
-            connectionString = "server=sql10.freesqldatabase.com ; database=sql10355581 ; User=sql10355581 ; password=tMq84eHwti ;  integrated security = true";
+            connectionString = "server=sql10.freesqldatabase.com ; database=sql ; User=sql; password= ;  integrated security = true";
         }
         protected MySqlConnection GetConnection()
         {

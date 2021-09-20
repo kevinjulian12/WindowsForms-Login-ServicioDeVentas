@@ -9,9 +9,9 @@ using System.Data.SqlClient;
 
 namespace Domain
 {
-    public class UserModel
+    public class CN_Usuario
     {
-        UserDao userDao = new UserDao();
+        UsuarioDAO userDao = new UsuarioDAO();
         public bool LoginUser(string user, string pass)
         {
             return userDao.Login(user, pass);
@@ -24,7 +24,7 @@ namespace Domain
         private string position;
         private string email;
         //Constructors
-        public UserModel(int idUser, string loginName, string password, string firstName, string lastName, string position, string email)
+        public CN_Usuario(int idUser, string loginName, string password, string firstName, string lastName, string position, string email)
         {
             this.idUser = idUser;
             this.loginName = loginName;
@@ -34,13 +34,14 @@ namespace Domain
             this.position = position;
             this.email = email;
         }
-        public UserModel()
+        //Es necesario, porque se invoco desde muchos formularios mediante constructor sin parámetros
+        public CN_Usuario()
         {
         }
         //Methods
-        public string editUserProfile()
+        public string Editar_Usuario()
         {                      
-                userDao.editProfile(idUser, loginName, password, firstName, lastName, email);
+                userDao.Update(idUser, loginName, password, firstName, lastName, email);
                 LoginUser(loginName, password);
                 return "Tú perfil ha sido actualizado satisfactoriamente";                    
         }

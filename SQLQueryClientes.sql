@@ -148,3 +148,24 @@ PRIMARY KEY CLUSTERED
 GO
 
 select Nombre,Marca,Descripcion,PrecioUnitario,Cantidad,SubTotal from ventasitems join productos on IDProducto=productos.ID where IDVenta=1
+
+
+
+select *from ventasitems
+join productos on IDProducto=productos.ID
+join ventas on IDVenta = ventas.ID
+join Clientes on IDCliente = Clientes.ID 
+ where Producto='gaseosa' 
+
+ select ve.ID,COUNT(*) as CantidadID,avg(ventasitems.SubTotal) as promedio from ventas ve
+ join ventasitems on ve.ID=ventasitems.IDVenta
+ join Clientes on ve.IDCliente=Clientes.ID
+ where ventasitems.IDProducto=1 AND ventasitems.IDProducto=2
+ group by ve.ID
+ 
+ 
+ select* from ventas ve
+ join ventasitems on ve.ID=ventasitems.IDVenta
+
+
+ 

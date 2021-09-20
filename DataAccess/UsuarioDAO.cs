@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace DataAccess
 {
-    public class UserDao : ConnectionToSql
+    public class UsuarioDAO : ConnectionToSql
     {
         public bool Login(string user, string pass)
         {
@@ -29,13 +29,13 @@ namespace DataAccess
                     {
                         while (reader.Read())//Obtenemos los datos de la columna y asignamos a los campos de la Cache de Usuario
                         {
-                            UserCache.IdUser = reader.GetInt32(0);
-                            UserCache.LoginName = reader.GetString(1);
-                            UserCache.Password = reader.GetString(2);
-                            UserCache.FirstName = reader.GetString(3);
-                            UserCache.LastName = reader.GetString(4);
-                            UserCache.Position = reader.GetString(5);
-                            UserCache.Email = reader.GetString(6);
+                            UsuarioDTO.IdUser = reader.GetInt32(0);
+                            UsuarioDTO.LoginName = reader.GetString(1);
+                            UsuarioDTO.Password = reader.GetString(2);
+                            UsuarioDTO.FirstName = reader.GetString(3);
+                            UsuarioDTO.LastName = reader.GetString(4);
+                            UsuarioDTO.Position = reader.GetString(5);
+                            UsuarioDTO.Email = reader.GetString(6);
                         }
                         return true;
                     }
@@ -44,7 +44,7 @@ namespace DataAccess
                 }
             }
         }
-        public void editProfile(int id, string userName, string password, string name, string lastName, string mail)
+        public void Update(int id, string userName, string password, string name, string lastName, string mail)
         {
             using (var connection = GetConnection())
             {

@@ -26,18 +26,18 @@ namespace Beta
         private void loadUserData()
         {
             //View
-            lblUser.Text = UserCache.LoginName;
-            lblName.Text = UserCache.FirstName;
-            lblLastName.Text = UserCache.LastName;
-            lblMail.Text = UserCache.Email;
-            lblPosition.Text = UserCache.Position;
+            lblUser.Text = UsuarioDTO.LoginName;
+            lblName.Text = UsuarioDTO.FirstName;
+            lblLastName.Text = UsuarioDTO.LastName;
+            lblMail.Text = UsuarioDTO.Email;
+            lblPosition.Text = UsuarioDTO.Position;
             //Edit Panel
-            txtUsername.Text = UserCache.LoginName;
-            txtFirstName.Text = UserCache.FirstName;
-            txtLastName.Text = UserCache.LastName;
-            txtEmail.Text = UserCache.Email;
-            txtPassword.Text = UserCache.Password;
-            txtConfirmPass.Text = UserCache.Password;
+            txtUsername.Text = UsuarioDTO.LoginName;
+            txtFirstName.Text = UsuarioDTO.FirstName;
+            txtLastName.Text = UsuarioDTO.LastName;
+            txtEmail.Text = UsuarioDTO.Email;
+            txtPassword.Text = UsuarioDTO.Password;
+            txtConfirmPass.Text = UsuarioDTO.Password;
             txtCurrentPassword.Text = "";
            
         }
@@ -72,8 +72,8 @@ namespace Beta
             else if (LinkEditPass.Text == "Cancelar")
             {
                 initializePassEditControls();
-                txtPassword.Text = UserCache.Password;
-                txtConfirmPass.Text = UserCache.Password;
+                txtPassword.Text = UsuarioDTO.Password;
+                txtConfirmPass.Text = UsuarioDTO.Password;
             }
         }
         private void btnSave_Click(object sender, EventArgs e)
@@ -82,17 +82,17 @@ namespace Beta
             {
                 if (txtPassword.Text == txtConfirmPass.Text)
                 {
-                    if (txtCurrentPassword.Text == UserCache.Password)
+                    if (txtCurrentPassword.Text == UsuarioDTO.Password)
                     {
-                        var userModel = new UserModel(
-                            idUser: UserCache.IdUser,
+                        var userModel = new CN_Usuario(
+                            idUser: UsuarioDTO.IdUser,
                             loginName: txtUsername.Text,
                             password: txtPassword.Text,
                             firstName: txtFirstName.Text,
                             lastName: txtLastName.Text,
                             position: null,
                             email: txtEmail.Text);                                              
-                        var result = userModel.editUserProfile();
+                        var result = userModel.Editar_Usuario();
                         MessageBox.Show(result);
                         reset();                        
                         panel1.Visible = false;

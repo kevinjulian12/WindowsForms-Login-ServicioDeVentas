@@ -341,13 +341,13 @@
     <None Include="Resources\icon restaurar.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
+    <ProjectReference Include="..\Common\CapaSoporte.csproj">
       <Project>{1dd44f43-e14a-4be0-a4f9-f41f86d451a6}</Project>
-      <Name>Common</Name>
+      <Name>CapaSoporte</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Domain\Domain.csproj">
+    <ProjectReference Include="..\Domain\CapaNegocio.csproj">
       <Project>{024405eb-7066-47fc-b5a3-8b678d0947d1}</Project>
-      <Name>Domain</Name>
+      <Name>CapaNegocio</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

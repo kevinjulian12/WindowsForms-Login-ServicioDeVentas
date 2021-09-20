@@ -1,0 +1,9 @@
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\DataAccess\bin\Debug\DataAccess.dll
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\DataAccess\bin\Debug\DataAccess.pdb
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\DataAccess\bin\Debug\Common.dll
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\DataAccess\bin\Debug\Common.pdb
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\DataAccess\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\DataAccess\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\DataAccess\obj\Debug\CapaDatos.csproj.CopyComplete
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\DataAccess\obj\Debug\DataAccess.dll
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\DataAccess\obj\Debug\DataAccess.pdb
