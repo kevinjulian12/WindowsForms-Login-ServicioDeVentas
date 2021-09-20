@@ -17,7 +17,7 @@ namespace DataAccess
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
 
-        public DataTable Mostrar()
+        public DataTable Read()
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "MostrarClientes";
@@ -28,34 +28,25 @@ namespace DataAccess
             return tabla;
 
         }
-        public void Insertar(string Nombre, string Apellido, string Direccion, string Telefono,string Localidad)
+        public void Create(string Nombre, string Apellido, string Direccion, string Telefono,string Localidad)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into Clientes(Nombre , Apellido, Direccion ,Telefono,Localidad ) values ('" + Nombre+"','"+Apellido+"','"+Direccion+"','"+Telefono+"','"+Localidad+"')";
             comando.CommandType = CommandType.Text;
-           // comando.Parameters.AddWithValue("@nombre", Nombre);
-           // comando.Parameters.AddWithValue("@apellido", Apellido);
-           // comando.Parameters.AddWithValue("@direccion", Direccion);
-           // comando.Parameters.AddWithValue("@telefono", Telefono);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
-        public void Editar(string ID, string Nombre, string Apellido, string Direccion, string Telefono,string Localidad)
+        public void Update(string ID, string Nombre, string Apellido, string Direccion, string Telefono,string Localidad)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "update Clientes set Nombre='"+Nombre+"',Apellido='"+Apellido+"',Direccion='"+Direccion+"',Telefono='"+Telefono+"',Localidad='"+Localidad+"' where ID='"+ID+"'";
             comando.CommandType = CommandType.Text;
-          //  comando.Parameters.AddWithValue("@id",ID);
-          // comando.Parameters.AddWithValue("@nombre", Nombre);
-          //  comando.Parameters.AddWithValue("@apellido", Apellido);
-          //  comando.Parameters.AddWithValue("@direccion", Direccion);
-          //  comando.Parameters.AddWithValue("@telefono", Telefono);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
-        public void Eliminar(int ID)
+        public void Delete(int ID)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "delete from Clientes where ID="+ID;

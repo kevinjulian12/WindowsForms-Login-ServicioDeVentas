@@ -163,11 +163,11 @@
     <Compile Include="FormVentas.Designer.cs">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="HistorialDeComprasClientes.cs">
+    <Compile Include="RegistrosClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HistorialDeComprasClientes.Designer.cs">
-      <DependentUpon>HistorialDeComprasClientes.cs</DependentUpon>
+    <Compile Include="RegistrosClientes.Designer.cs">
+      <DependentUpon>RegistrosClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="HistorialProveedor.cs">
       <SubType>Form</SubType>
@@ -246,8 +246,8 @@
     <EmbeddedResource Include="FormVentas.resx">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HistorialDeComprasClientes.resx">
-      <DependentUpon>HistorialDeComprasClientes.cs</DependentUpon>
+    <EmbeddedResource Include="RegistrosClientes.resx">
+      <DependentUpon>RegistrosClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HistorialProveedor.resx">
       <DependentUpon>HistorialProveedor.cs</DependentUpon>

@@ -12,11 +12,18 @@ namespace Domain
     {
         private CD_Clientes objetoCD = new CD_Clientes();
 
+        private string _id;
         private String elApellido;
         private String elNombre;
         private String elTelefono;
         private String laDireccion;
         private String laLocalidad;
+
+        public string id
+        {
+            get { return _id; }
+            set { _id = value.ToString(); }
+        }
 
         public String Apellido
         {
@@ -44,23 +51,26 @@ namespace Domain
             set { laLocalidad = value.ToString(); }
         }
 
-        public DataTable MostrarClien()
+        public DataTable MostrarClientes()
         {
             DataTable tabla = new DataTable();
-            tabla = objetoCD.Mostrar();
+            tabla = objetoCD.Read();
             return tabla;
         }
-        public void InsertarClien()
+
+        public void InsertarCliente()
         {
-            objetoCD.Insertar(elNombre, elApellido, laDireccion, elTelefono,laLocalidad);
+            objetoCD.Create(elNombre, elApellido, laDireccion, elTelefono,laLocalidad);
         }
-        public void EditarClien(string ID, string Nombre, string Apellido, string Direccion, string Telefono,string Localidad)
+
+        public void EditarCliente()
         {
-            objetoCD.Editar(ID,Nombre, Apellido, Direccion, Telefono,Localidad);
+            objetoCD.Update(_id,elNombre, elApellido, laDireccion, elTelefono, laLocalidad);
         }
-        public void EliminarClien(string ID)
+
+        public void EliminarCliente()
         {
-            objetoCD.Eliminar(Convert.ToInt32(ID));
+            objetoCD.Delete(Convert.ToInt32(_id));
         }
 
     }

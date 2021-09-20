@@ -1,6 +1,6 @@
 ﻿namespace Beta
 {
-    partial class HistorialDeComprasClientes
+    partial class RegistrosClientes
     {
         /// <summary>
         /// Required designer variable.

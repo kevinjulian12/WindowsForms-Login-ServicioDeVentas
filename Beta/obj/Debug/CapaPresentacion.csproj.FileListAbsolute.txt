@@ -21,7 +21,6 @@ Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormProductos.
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormProveedores.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.Formulario.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormVentas.resources
-Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.HistorialDeComprasClientes.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.HistorialProveedor.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.ListaDeClientes.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.ListaDeProductos.resources
@@ -38,3 +37,4 @@ Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.application
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\CapaPresentacion.csproj.CopyComplete
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.exe
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.pdb
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.RegistrosClientes.resources

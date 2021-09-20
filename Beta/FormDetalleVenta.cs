@@ -51,5 +51,11 @@ namespace Beta
         {
             mostrar();
         }
+
+        private void boton1_Click(object sender, EventArgs e)
+        {
+            Formulario formulario = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
+            
+        }
     }
 }

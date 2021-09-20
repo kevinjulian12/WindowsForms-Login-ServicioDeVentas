@@ -11,9 +11,9 @@ using Domain;
 
 namespace Beta
 {
-    public partial class HistorialDeComprasClientes : Form
+    public partial class RegistrosClientes : Form
     {
-        public HistorialDeComprasClientes()
+        public RegistrosClientes()
         {
             InitializeComponent();
         }
@@ -87,7 +87,8 @@ namespace Beta
             {
                 FormDetalleVenta formDetalleVenta = new FormDetalleVenta();
                 formDetalleVenta.ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-                formDetalleVenta.ShowDialog();
+                Formulario formulario = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
+                formulario.openChildFormInPanel(formDetalleVenta);
             }
             else
                 MessageBox.Show("Por favor seleccione una fila...");

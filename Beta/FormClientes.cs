@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
 
@@ -13,11 +8,9 @@ namespace Beta
 {
     public partial class FormClientes : Form
     {
-        public bool Editar = false;
+        private bool Editar = false;
         private CN_Clientes objetoCN = new CN_Clientes();
-        private string idCliente = null;
-        private string id;
-        
+
         public FormClientes()
         {
             InitializeComponent();
@@ -36,7 +29,7 @@ namespace Beta
         public void MostrarClientes()
         {
             CN_Clientes objeto = new CN_Clientes();
-            dataGridView1.DataSource = objeto.MostrarClien();
+            dataGridView1.DataSource = objeto.MostrarClientes();
             dataGridView1.Columns.GetFirstColumn(0).Visible = false;
         }
 
@@ -57,7 +50,7 @@ namespace Beta
                         objetoCN.Direccion = txtdireccion.Texts;
                         objetoCN.Localidad = txtLocalidad.Texts;
                         objetoCN.Telefono = txttelefono.Texts;
-                        objetoCN.InsertarClien();
+                        objetoCN.InsertarCliente();
                         MessageBox.Show("se inserto correctamente");
                         MostrarClientes();
                         limpiarForm();
@@ -76,14 +69,18 @@ namespace Beta
             {
                 try
                 {
-
-                    if (txtapellido.Texts.Length < 3 || txtdireccion.Texts.Length < 3 || txtLocalidad.Texts.Length < 3 || txtnombre.Texts.Length< 3 || txttelefono.Texts.Length < 6)
+                    if (txtapellido.Texts.Length < 3 || txtdireccion.Texts.Length < 3 || txtLocalidad.Texts.Length < 3 || txtnombre.Texts.Length < 3 || txttelefono.Texts.Length < 6)
                     {
                         MessageBox.Show("Complete todos los campos, deben tener como minimo 3 caracter y telefono minimo de 6 caracter");
                     }
                     else
                     {
-                        objetoCN.EditarClien(id, txtnombre.Texts, txtapellido.Texts, txtdireccion.Texts, txttelefono.Texts, txtLocalidad.Texts);
+                        objetoCN.Nombre = txtnombre.Texts;
+                        objetoCN.Apellido = txtapellido.Texts;
+                        objetoCN.Direccion = txtdireccion.Texts;
+                        objetoCN.Localidad = txtLocalidad.Texts;
+                        objetoCN.Telefono = txttelefono.Texts;
+                        objetoCN.EditarCliente();
                         MessageBox.Show("se edito correctamente");
                         MostrarClientes();
                         limpiarForm();
@@ -112,15 +109,14 @@ namespace Beta
                 return;
             }
         }
+
         private void txtCaracternDecimal_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
-
             // Si deseas, puedes permitir numeros decimales (o float)
-            // If you want, you can allow decimal (float) numbers
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
@@ -132,7 +128,7 @@ namespace Beta
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 Editar = true;
-                id = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+                objetoCN.id = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
                 txtnombre.Texts = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
                 txtapellido.Texts = dataGridView1.CurrentRow.Cells["Apellido"].Value.ToString();
                 txtdireccion.Texts = dataGridView1.CurrentRow.Cells["Direccion"].Value.ToString();
@@ -144,7 +140,9 @@ namespace Beta
                 btnCancelar.Enabled = true;
             }
             else
+            {
                 MessageBox.Show("seleccione una fila por favor");
+            }
         }
 
         private void limpiarForm()
@@ -160,8 +158,8 @@ namespace Beta
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
-                objetoCN.EliminarClien(idCliente);
+                objetoCN.id = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                objetoCN.EliminarCliente();
                 MessageBox.Show("Eliminado correctamente");
                 MostrarClientes();
                 btnEliminar.Enabled = false;
@@ -172,11 +170,11 @@ namespace Beta
                 label6.Visible = true;
             }
             else
+            {
                 MessageBox.Show("seleccione una fila por favor");
-
+            }
         }
       
-
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             btnEliminar.Enabled = true;
@@ -197,25 +195,20 @@ namespace Beta
         {
             dataGridView1.Enabled = true;
             Editar = false;
-            
             limpiarForm();
             textBox1.Enabled = false;
             textBox1.Clear();
             label6.Visible = true;
             btnCancelar.Enabled = false;
-            // if (dataGridView1.SelectedRows.Count > 0)
-            // {
-            //     btnCancelar.Enabled = true;
-            // }
         }
-        string NombreColumna = "";
 
-        
+        string NombreColumna = "";
+ 
         private void tuGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        { NombreColumna = dataGridView1.Columns[e.ColumnIndex].DataPropertyName.Trim();
+        {
+            NombreColumna = dataGridView1.Columns[e.ColumnIndex].DataPropertyName.Trim();
             textBox1.Enabled = true;
             label6.Visible = false;
-
         }
 
         private void FiltrarDatosDatagridview(DataGridView datagrid, string nombre_columna, TextBox txt_buscar)
@@ -224,11 +217,11 @@ namespace Beta
             ///para que no provoque una excepción.
             string cadena = txt_buscar.Text.Trim().Replace("*", "");
             string filtro = string.Format("convert([{0}], System.String) LIKE '{1}%'", nombre_columna, cadena);
-
             ///A la vista del DataGridView con la propiedad RowFilter
             ///se le asigna la cadena del filtro para mostrarla en el DataGridView
             (datagrid.DataSource as DataTable).DefaultView.RowFilter = filtro;
         }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             FiltrarDatosDatagridview(dataGridView1, NombreColumna, textBox1);      
@@ -246,13 +239,13 @@ namespace Beta
                 btnCancelar.Enabled = true;
             }
         }
-
         
         private void btnHistorial_Click(object sender, EventArgs e)
         {
-            HistorialDeComprasClientes historial = new HistorialDeComprasClientes();
+            RegistrosClientes historial = new RegistrosClientes();
             historial.id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value);
-            historial.ShowDialog();
+            Formulario formulario = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
+            formulario.openChildFormInPanel(historial);
         }
     }
 }
