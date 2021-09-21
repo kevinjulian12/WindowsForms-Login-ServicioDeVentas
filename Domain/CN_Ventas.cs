@@ -11,13 +11,22 @@ namespace Domain
     public class CN_Ventas
     {
         CD_Ventas Ventas = new CD_Ventas();
-        public int IDCliente { get; set; }
+
         public int idVenta { get; set; }
 
-        public DataTable MostraHistVent(int IDCliente)
+        private string idCliente;
+
+        public string IDCliente
         {
-            return Ventas.MostrarHistVent(IDCliente);
+            get { return idCliente; }
+            set { idCliente = value.ToString(); }
         }
+
+        public DataTable MostraHistVent()
+        {
+            return Ventas.read(Convert.ToInt32(idCliente));
+        }
+
         public DataTable mostrarReporte()
         {
             return Ventas.MostrarReporte();
@@ -31,10 +40,10 @@ namespace Domain
         
         public void Eliminar(int idVenta)
         {
-            Ventas.EliminarHist(idVenta);
+            Ventas.delete(idVenta);
         }
 
-       public DataTable Los5ProductosMasVendidos()
+        public DataTable Los5ProductosMasVendidos()
         {
             return Ventas.Los5ProductosMasVendidos();
         }

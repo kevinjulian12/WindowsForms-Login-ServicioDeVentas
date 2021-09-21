@@ -35,7 +35,10 @@ namespace Beta
         public void openChildFormInPanel(Form childForm)
         {
             if (activeForm != null)
+            {
                 activeForm.Close();
+            }
+                
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;

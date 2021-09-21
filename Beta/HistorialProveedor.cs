@@ -85,9 +85,7 @@ namespace Beta
             {
                     FormDetalleCompras detalleCompras = new FormDetalleCompras();
                     detalleCompras.ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-                    detalleCompras.ShowDialog();
-                    FormDetalleVenta formDetalleVenta = new FormDetalleVenta();
-              
+                    detalleCompras.ShowDialog(); 
             }
             else
                 MessageBox.Show("Por favor seleccione una fila...");

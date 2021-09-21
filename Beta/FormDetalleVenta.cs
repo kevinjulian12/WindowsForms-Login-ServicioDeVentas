@@ -13,8 +13,10 @@ namespace Beta
 {
     public partial class FormDetalleVenta : Form
     {
-        public FormDetalleVenta()
+        private CN_Ventas ventas;
+        public FormDetalleVenta(CN_Ventas Ventas)
         {
+            this.ventas = Ventas;
             InitializeComponent();
         }
 
@@ -52,10 +54,11 @@ namespace Beta
             mostrar();
         }
 
-        private void boton1_Click(object sender, EventArgs e)
+        private void botonVolver_Click(object sender, EventArgs e)
         {
-            Formulario formulario = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
-            
+           RegistrosClientes historial = new RegistrosClientes(ventas);
+           Formulario formulario = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
+           formulario.openChildFormInPanel(historial);
         }
     }
 }

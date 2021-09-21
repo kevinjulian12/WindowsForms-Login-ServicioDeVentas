@@ -15,7 +15,7 @@ namespace DataAccess
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
 
-        public DataTable MostrarHistVent(int IdCliente)
+        public DataTable read(int IdCliente)
         { 
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "select* from ventas where IDCliente=" + IdCliente + ";";
@@ -66,7 +66,7 @@ namespace DataAccess
 
  
 
-    public void EliminarHist(int Id)
+    public void delete(int Id)
         { 
         comando.Connection = conexion.AbrirConexion();
         comando.CommandText = "delete from ventas where ID=" + Id;

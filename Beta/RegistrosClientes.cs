@@ -13,15 +13,16 @@ namespace Beta
 {
     public partial class RegistrosClientes : Form
     {
-        public RegistrosClientes()
+       
+        private CN_Ventas ventas;
+
+        public RegistrosClientes(CN_Ventas Ventas)
         {
+            this.ventas = Ventas;
             InitializeComponent();
         }
-       private CN_Ventas ventas = new CN_Ventas();
-       private CN_VentasItem VentasItem = new CN_VentasItem();
 
-        public int id;
-   
+        private CN_VentasItem VentasItem = new CN_VentasItem();
 
         private void HistorialDeComprasClientes_Load(object sender, EventArgs e)
         {
@@ -30,8 +31,10 @@ namespace Beta
 
         public void mostrar()
         {
-            CN_Ventas _Ventas = new CN_Ventas();
-            dataGridView1.DataSource = _Ventas.MostraHistVent(id);
+            var IdCliente = ventas.IDCliente;
+            CN_Ventas CN_Ventas = new CN_Ventas();
+            CN_Ventas.IDCliente = IdCliente;
+            dataGridView1.DataSource = CN_Ventas.MostraHistVent();
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].Visible = false;
         }
@@ -48,19 +51,19 @@ namespace Beta
             ///se le asigna la cadena del filtro para mostrarla en el DataGridView
             (datagrid.DataSource as DataTable).DefaultView.RowFilter = filtro;
         }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             FiltrarDatosDatagridview(dataGridView1, NombreColumna, textBox1);
         }
+
         private void tuGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             NombreColumna = dataGridView1.Columns[e.ColumnIndex].DataPropertyName.Trim();
             textBox1.Enabled = true;
             label6.Visible = false;
-
         }
 
-       
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -69,9 +72,7 @@ namespace Beta
                 VentasItem.Eliminar(ID);
                 ventas.Eliminar(ID);
                 mostrar();
-                MessageBox.Show("Eliminado correctamente");
-                
-               
+                MessageBox.Show("Eliminado correctamente"); 
             }
             else
             {
@@ -85,7 +86,7 @@ namespace Beta
             // {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                FormDetalleVenta formDetalleVenta = new FormDetalleVenta();
+                FormDetalleVenta formDetalleVenta = new FormDetalleVenta(ventas);
                 formDetalleVenta.ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
                 Formulario formulario = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
                 formulario.openChildFormInPanel(formDetalleVenta);
@@ -99,10 +100,18 @@ namespace Beta
             // MessageBox.Show("No hay un registro seleccionado");
             //}
         }
+
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             btnHistorial.Enabled = true;
             btnEliminar.Enabled = true;
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Formulario formulario = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
+            FormClientes clientes = new FormClientes();
+            formulario.openChildFormInPanel(clientes);
         }
     }
 }

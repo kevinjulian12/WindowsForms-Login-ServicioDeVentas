@@ -239,11 +239,12 @@ namespace Beta
                 btnCancelar.Enabled = true;
             }
         }
-        
+
+        private CN_Ventas ventas = new CN_Ventas();
         private void btnHistorial_Click(object sender, EventArgs e)
         {
-            RegistrosClientes historial = new RegistrosClientes();
-            historial.id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value);
+            RegistrosClientes historial = new RegistrosClientes(ventas);
+            ventas.IDCliente = Convert.ToString(dataGridView1.CurrentRow.Cells["ID"].Value);
             Formulario formulario = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
             formulario.openChildFormInPanel(historial);
         }
