@@ -86,13 +86,15 @@ namespace Beta
             // {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                FormDetalleVenta formDetalleVenta = new FormDetalleVenta(ventas);
+                FormDetallesVenta formDetalleVenta = new FormDetallesVenta(ventas);
                 formDetalleVenta.ID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
                 Formulario formulario = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
                 formulario.openChildFormInPanel(formDetalleVenta);
             }
             else
+            {
                 MessageBox.Show("Por favor seleccione una fila...");
+            }
             //}
             //catch (Exception)
             //{

@@ -11,17 +11,20 @@ namespace Beta
     public partial class Formulario : Form
     {
         login login = new login();
+
         public Formulario()
         {
             InitializeComponent();
             login.Close();
         }
+
         public void Formulario_Load(object sender, EventArgs e)
         {
             LoadUserData();           
             privilegio();
             dropdownMenu1.IsMainMenu = true;
         }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -31,14 +34,14 @@ namespace Beta
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
         private Form activeForm = null;
         public void openChildFormInPanel(Form childForm)
         {
             if (activeForm != null)
             {
                 activeForm.Close();
-            }
-                
+            } 
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -47,10 +50,11 @@ namespace Beta
             panelChildForm1.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-
         }
+
         int lx, ly;
         int sw, sh;
+
        private void iconmaximizar_Click(object sender, EventArgs e)
         {
             lx = this.Location.X;
@@ -62,6 +66,7 @@ namespace Beta
             iconrestaurar.Visible = true;
             iconmaximizar.Visible = false;
         }
+
         public void Maximizar()
         {
             lx = this.Location.X;
@@ -74,15 +79,14 @@ namespace Beta
             iconmaximizar.Visible = false;
         }
 
-
         private void iconrestaurar_Click(object sender, EventArgs e)
         {
             this.Size = new Size(sw, sh);
             this.Location = new Point(lx, ly);
             iconrestaurar.Visible = false;
             iconmaximizar.Visible = true;
-
         }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -118,9 +122,7 @@ namespace Beta
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-           // if (MessageBox.Show("Are you sure to log out?", "Warning",
-            //   MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                this.Close();
+            this.Close();
         }
 
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
@@ -184,7 +186,6 @@ namespace Beta
                 this.tmExpandirMenu.Stop();
             else
                 panelSideMenu.Width = panelSideMenu.Width + 5;
-
         }
 
         private void tmContraerMenu_Tick(object sender, EventArgs e)
@@ -194,15 +195,12 @@ namespace Beta
             else
                 panelSideMenu.Width = panelSideMenu.Width - 5;
         }
-
         //----------------DIBUJAR RECTANGULO / EXCLUIR ESQUINA PANEL 
         protected override void OnSizeChanged(EventArgs e)
         {
             base.OnSizeChanged(e);
             var region = new Region(new Rectangle(0, 0, this.ClientRectangle.Width, this.ClientRectangle.Height));
-
             sizeGripRectangle = new Rectangle(this.ClientRectangle.Width - tolerance, this.ClientRectangle.Height - tolerance, tolerance, tolerance);
-
             region.Exclude(sizeGripRectangle);
             this.panelChildForm1.Region = region;
             this.Invalidate();
@@ -210,10 +208,8 @@ namespace Beta
         //----------------COLOR Y GRIP DE RECTANGULO INFERIOR
         protected override void OnPaint(PaintEventArgs e)
         {
-
             SolidBrush blueBrush = new SolidBrush(Color.FromArgb(55, 61, 69));
             e.Graphics.FillRectangle(blueBrush, sizeGripRectangle);
-
             base.OnPaint(e);
             ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
         }
@@ -242,8 +238,6 @@ namespace Beta
             SubmenuReportes.Visible = false;
         }
       
-
-
         private void button6_Click(object sender, EventArgs e)
         {
             Pagos pagos = new Pagos();
@@ -251,16 +245,12 @@ namespace Beta
             label4.Text = "Pagos";
         }
 
-      
-
         private void botonUsuario_Click_1(object sender, EventArgs e)
         {
             Editar_Perfil editar_Perfil = new Editar_Perfil();
             openChildFormInPanel(editar_Perfil);
             label4.Text = "Mi Perfil";
         }
-
-       
 
         private void boton1_Click_1(object sender, EventArgs e)
         {
@@ -285,25 +275,22 @@ namespace Beta
             {
                 boton1.Text = "Notificaciones " + Convert.ToString(FaltaStock);
                 botonUsuario.Text = UsuarioDTO.LoginName;
-                
             }
             else
             {
                 boton1.Text = "Notificaciones";
                 botonUsuario.Text = UsuarioDTO.LoginName;
             }
-            
-           
         }
 
         private void privilegio()
         {
-            if(UsuarioDTO.Position != "Administrator") {
+            if(UsuarioDTO.Position != "Administrator")
+            {
                 btnProductos.Enabled = false;
                 btnReportes.Enabled = false;
                 btnrptcompra.Enabled = false;
             }
-            
         }
         
     }

@@ -1,6 +1,6 @@
 ﻿namespace Beta
 {
-    partial class FormDetalleVenta
+    partial class FormDetallesVenta
     {
         /// <summary>
         /// Required designer variable.

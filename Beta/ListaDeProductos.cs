@@ -17,6 +17,7 @@ namespace Beta
         {
             InitializeComponent();
         }
+
         private void btnSelect_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -31,6 +32,7 @@ namespace Beta
             else
                 MessageBox.Show("Por favor seleccione una fila...");
         }
+
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             btnSelect.Enabled = true;
@@ -40,10 +42,11 @@ namespace Beta
         {
             MostrarProductos();
         }
+
         public void MostrarProductos()
         {
             CN_Productos objeto = new CN_Productos();
-            dataGridView1.DataSource = objeto.MostrarProd();
+            dataGridView1.DataSource = objeto.MostrarProductos();
             dataGridView1.Columns.GetFirstColumn(0).Visible = false;
         }
 
@@ -59,16 +62,17 @@ namespace Beta
             ///se le asigna la cadena del filtro para mostrarla en el DataGridView
             (datagrid.DataSource as DataTable).DefaultView.RowFilter = filtro;
         }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             FiltrarDatosDatagridview(dataGridView1, NombreColumna, textBox1);
         }
+
         private void tuGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             NombreColumna = dataGridView1.Columns[e.ColumnIndex].DataPropertyName.Trim();
             textBox1.Enabled = true;
             label6.Visible = false;
-
         }
     }
 }

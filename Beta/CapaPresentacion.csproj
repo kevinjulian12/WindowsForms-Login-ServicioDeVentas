@@ -121,11 +121,11 @@
     <Compile Include="FormDetalleCompras.Designer.cs">
       <DependentUpon>FormDetalleCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDetalleVenta.cs">
+    <Compile Include="FormDetallesVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDetalleVenta.Designer.cs">
-      <DependentUpon>FormDetalleVenta.cs</DependentUpon>
+    <Compile Include="FormDetallesVenta.Designer.cs">
+      <DependentUpon>FormDetallesVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="FormReporteVentas.cs">
       <SubType>Form</SubType>
@@ -225,8 +225,8 @@
     <EmbeddedResource Include="FormDetalleCompras.resx">
       <DependentUpon>FormDetalleCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDetalleVenta.resx">
-      <DependentUpon>FormDetalleVenta.cs</DependentUpon>
+    <EmbeddedResource Include="FormDetallesVenta.resx">
+      <DependentUpon>FormDetallesVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormReporteVentas.resx">
       <DependentUpon>FormReporteVentas.cs</DependentUpon>

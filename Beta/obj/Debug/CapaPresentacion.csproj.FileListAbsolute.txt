@@ -14,7 +14,6 @@ Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.Controles.Text
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.Editar_Perfil.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormCompras.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormDetalleCompras.resources
-Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormDetalleVenta.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormReporteVentas.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormClientes.resources
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormProductos.resources
@@ -38,3 +37,4 @@ Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\CapaPresentacion.cs
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.exe
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.pdb
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.RegistrosClientes.resources
+Z:\kevin\Documents\C#\AppCliente-Productos-C#\Beta\obj\Debug\Beta.FormDetallesVenta.resources

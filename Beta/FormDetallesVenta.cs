@@ -11,21 +11,25 @@ using Domain;
 
 namespace Beta
 {
-    public partial class FormDetalleVenta : Form
+    public partial class FormDetallesVenta : Form
     {
         private CN_Ventas ventas;
-        public FormDetalleVenta(CN_Ventas Ventas)
+
+        public FormDetallesVenta(CN_Ventas Ventas)
         {
             this.ventas = Ventas;
             InitializeComponent();
         }
 
         CN_VentasItem VentasItem = new CN_VentasItem();
+
         public int ID { get; set; }
+
         public void mostrar()
         {
             dataGridView1.DataSource = VentasItem.MostrarVentaItem(ID);
         }
+
         string NombreColumna = "";
         private void FiltrarDatosDatagridview(DataGridView datagrid, string nombre_columna, TextBox txt_buscar)
         {
@@ -38,10 +42,12 @@ namespace Beta
             ///se le asigna la cadena del filtro para mostrarla en el DataGridView
             (datagrid.DataSource as DataTable).DefaultView.RowFilter = filtro;
         }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             FiltrarDatosDatagridview(dataGridView1, NombreColumna, textBox1);
         }
+
         private void tuGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             NombreColumna = dataGridView1.Columns[e.ColumnIndex].DataPropertyName.Trim();

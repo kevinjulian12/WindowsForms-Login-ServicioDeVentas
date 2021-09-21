@@ -180,7 +180,7 @@ namespace Beta
                                                   Convert.ToSingle(row.Cells[5].Value),
                                                   Convert.ToInt32(row.Cells[6].Value),
                                                   Convert.ToSingle(row.Cells[7].Value));
-                            Productos.EditarProd(Convert.ToString(row.Cells[1].Value), Convert.ToString(row.Cells[2].Value), Convert.ToString(row.Cells[3].Value), Convert.ToString(row.Cells[4].Value), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[0].Value));
+                            Productos.EditarProducto(Convert.ToString(row.Cells[1].Value), Convert.ToString(row.Cells[2].Value), Convert.ToString(row.Cells[3].Value), Convert.ToString(row.Cells[4].Value), Convert.ToString(row.Cells[5].Value), Convert.ToString(row.Cells[8].Value), Convert.ToString(row.Cells[0].Value));
                         }
                         else
                         {

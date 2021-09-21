@@ -19,6 +19,7 @@ namespace Beta
         private bool Editar = false;
         private string id;
         private string costo = "0";
+
         public FormProductos()
         {
             InitializeComponent();
@@ -27,16 +28,19 @@ namespace Beta
             btnEliminar.Enabled = false;
             btnGuardar.Enabled = false;
         }
+
         private void FormProductos_Load(object sender, EventArgs e)
         {
-            MostrarProdctos();
+            MostrarProductos();
         }
-        private void MostrarProdctos()
+
+        private void MostrarProductos()
         {
             CN_Productos objeto = new CN_Productos();
-            dataGridView1.DataSource = objeto.MostrarProd();
+            dataGridView1.DataSource = objeto.MostrarProductos();
             dataGridView1.Columns.GetFirstColumn(0).Visible = false;
         }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             //INSERTAR
@@ -63,9 +67,9 @@ namespace Beta
                             else
                             {
                                 costo = "0";
-                                objetoCN.InsertarPRod(txtNombre.Texts, txtDesc.Texts, txtMarca.Texts,Convert.ToString(costo) ,txtPrecio.Texts, txtStock.Texts);
+                                objetoCN.InsertarProducto(txtNombre.Texts, txtDesc.Texts, txtMarca.Texts,Convert.ToString(costo) ,txtPrecio.Texts, txtStock.Texts);
                                 MessageBox.Show("se inserto correctamente");
-                                MostrarProdctos();
+                                MostrarProductos();
                                 limpiarForm();
                                 textBox1.Enabled = false;
                                 textBox1.Clear();
@@ -104,9 +108,9 @@ namespace Beta
                             }
                             else
                             {
-                                objetoCN.EditarProd(txtNombre.Texts, txtDesc.Texts, txtMarca.Texts,costo , txtPrecio.Texts, txtStock.Texts, id);
+                                objetoCN.EditarProducto(txtNombre.Texts, txtDesc.Texts, txtMarca.Texts,costo , txtPrecio.Texts, txtStock.Texts, id);
                                 MessageBox.Show("se edito correctamente");
-                                MostrarProdctos();
+                                MostrarProductos();
                                 limpiarForm();
                                 Editar = false;
                                 btnCancelar.Enabled = false;
@@ -126,6 +130,7 @@ namespace Beta
                 }
             }
         }
+
         private void txtCaracter_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
@@ -135,6 +140,7 @@ namespace Beta
                 return;
             }
         }
+
         private void txtCaracternDecimal_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -143,9 +149,7 @@ namespace Beta
                 e.Handled = true;
                 return;
             }
-
             // Si deseas, puedes permitir numeros decimales (o float)
-            // If you want, you can allow decimal (float) numbers
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -153,6 +157,7 @@ namespace Beta
                 return;
             }
         }
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -169,11 +174,11 @@ namespace Beta
                 btnEliminar.Enabled = false;
                 dataGridView1.Enabled = false;
                 btnCancelar.Enabled = true;
-
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
         }
+
         private void limpiarForm()
         {
             txtDesc.Texts = "";
@@ -182,14 +187,15 @@ namespace Beta
             txtStock.Texts = "";
             txtNombre.Texts = "";
         }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 idProducto = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
-                objetoCN.EliminarPRod(idProducto);
+                objetoCN.EliminarProducto(idProducto);
                 MessageBox.Show("Eliminado correctamente");
-                MostrarProdctos();
+                MostrarProductos();
                 btnEliminar.Enabled = false;
                 btnEditar.Enabled = false;
                 btnCancelar.Enabled = false;
@@ -215,11 +221,11 @@ namespace Beta
                 btnCancelar.Enabled = true;
             }
         }
+
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             btnEliminar.Enabled = true;
             btnEditar.Enabled = true;
-            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -233,16 +239,14 @@ namespace Beta
         {
             dataGridView1.Enabled = true;
             Editar = false;
-            
             limpiarForm();
             textBox1.Enabled = false;
             textBox1.Clear();
             label6.Visible = true;
             btnCancelar.Enabled = false;
-        
         }
-        string NombreColumna = "";
 
+        string NombreColumna = "";
 
         private void tuGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -257,11 +261,11 @@ namespace Beta
             ///para que no provoque una excepción.
             string cadena = txt_buscar.Text.Trim().Replace("*", "");
             string filtro = string.Format("convert([{0}], System.String) LIKE '{1}%'", nombre_columna, cadena);
-
             ///A la vista del DataGridView con la propiedad RowFilter
             ///se le asigna la cadena del filtro para mostrarla en el DataGridView
             (datagrid.DataSource as DataTable).DefaultView.RowFilter = filtro;
         }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             FiltrarDatosDatagridview(dataGridView1, NombreColumna, textBox1);

@@ -37,7 +37,6 @@ namespace Domain
             return Ventas.Insertar(idcliente, fecha, total);
         }
    
-        
         public void Eliminar(int idVenta)
         {
             Ventas.delete(idVenta);

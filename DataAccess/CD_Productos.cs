@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 
 namespace DataAccess
@@ -15,9 +9,9 @@ namespace DataAccess
         SqlDataReader leer;
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
-        public DataTable Mostrar()
-        {
 
+        public DataTable Read()
+        {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "MostrarProductos";
             comando.CommandType = CommandType.StoredProcedure;
@@ -25,12 +19,11 @@ namespace DataAccess
             tabla.Load(leer);
             conexion.CerrarConexion();
             return tabla;
-
         }
-        public void Insertar(string nombre, string desc, string marca,double costo, double precio, int stock)
+
+        public void Create(string nombre, string desc, string marca,double costo, double precio, int stock)
         {
             comando.Connection = conexion.AbrirConexion();
-            //comando.CommandText = "insert into Productos(Nombre , Descripcion , Marca , Precio , Stock) values('" + nombre+"', '"+desc+"', '"+marca+"', '"+precio+"','"+stock+"')";
             comando.CommandText = "InsetarProductos";
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@nombre", nombre);
@@ -47,7 +40,6 @@ namespace DataAccess
         public object InsertarUsoCompras(string nombre, string desc, string marca, double costo, double precio, int stock)
         {
             comando.Connection = conexion.AbrirConexion();
-            
             comando.CommandText = "insert into Productos(Producto , Descripcion , Marca , Costo ,Precio , Stock) values('" + nombre + "', '" + desc + "', '" + marca + "', '" + costo + "', '" + precio + "','" + stock + "'); SELECT SCOPE_IDENTITY();";
             comando.CommandType = CommandType.Text;
             object Idproducto;
@@ -57,10 +49,9 @@ namespace DataAccess
             return Idproducto;
         }
 
-        public void Editar(string nombre, string desc, string marca,double costo , double precio, int stock, int id)
+        public void Update(string nombre, string desc, string marca,double costo , double precio, int stock, int id)
         {
             comando.Connection = conexion.AbrirConexion();
-            //comando.CommandText = "update Productos set Nombre='" + nombre + "',Descripcion='" + desc + "',Marca='" + marca + "',Precio='" + precio + "',Stock='"+stock+"' where ID='" + id + "'";
             comando.CommandText = "EditarProductos";
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@nombre", nombre);
@@ -74,10 +65,10 @@ namespace DataAccess
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
-        public void Eliminar(int id)
+
+        public void Delete(int id)
         {
             comando.Connection = conexion.AbrirConexion();
-            // comando.CommandText = "delete from Productos where ID=" + id;
             comando.CommandText = "EliminarProducto";
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@idpro", id);
@@ -119,7 +110,6 @@ namespace DataAccess
             tabla.Load(leer);
             conexion.CerrarConexion();
             return tabla;
-
         }
     }
 }
