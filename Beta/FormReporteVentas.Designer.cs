@@ -40,8 +40,6 @@
             // 
             // chart1
             // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.chart1.BackSecondaryColor = System.Drawing.Color.Transparent;
             this.chart1.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
@@ -50,6 +48,7 @@
             chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Left;
             legend1.BackColor = System.Drawing.Color.Transparent;
             legend1.BorderColor = System.Drawing.Color.Transparent;
             legend1.DockedToChartArea = "ChartArea1";
@@ -77,7 +76,7 @@
             series1.ShadowColor = System.Drawing.Color.Black;
             series1.YValuesPerPoint = 3;
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(363, 294);
+            this.chart1.Size = new System.Drawing.Size(363, 289);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,9 +89,9 @@
             // 
             this.panel1.Controls.Add(this.chart1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 253);
+            this.panel1.Location = new System.Drawing.Point(0, 261);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(898, 297);
+            this.panel1.Size = new System.Drawing.Size(898, 289);
             this.panel1.TabIndex = 1;
             // 
             // FormReporteVentas
