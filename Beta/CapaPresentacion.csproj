@@ -120,113 +120,113 @@
     <Compile Include="Controles\TextBox.Designer.cs">
       <DependentUpon>TextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Editar_Perfil.cs">
+    <Compile Include="Forms\Editar_Perfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editar_Perfil.Designer.cs">
+    <Compile Include="Forms\Editar_Perfil.Designer.cs">
       <DependentUpon>Editar_Perfil.cs</DependentUpon>
     </Compile>
     <Compile Include="EncryptHelper.cs" />
-    <Compile Include="FormCompras.cs">
+    <Compile Include="Forms\FormCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCompras.Designer.cs">
+    <Compile Include="Forms\FormCompras.Designer.cs">
       <DependentUpon>FormCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDetalleCompras.cs">
+    <Compile Include="Forms\FormDetalleCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDetalleCompras.Designer.cs">
+    <Compile Include="Forms\FormDetalleCompras.Designer.cs">
       <DependentUpon>FormDetalleCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDetallesVenta.cs">
+    <Compile Include="Forms\FormDetallesVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDetallesVenta.Designer.cs">
+    <Compile Include="Forms\FormDetallesVenta.Designer.cs">
       <DependentUpon>FormDetallesVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormReporteVentas.cs">
+    <Compile Include="Forms\FormReporteVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormReporteVentas.Designer.cs">
+    <Compile Include="Forms\FormReporteVentas.Designer.cs">
       <DependentUpon>FormReporteVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormClientes.cs">
+    <Compile Include="Forms\FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormClientes.Designer.cs">
+    <Compile Include="Forms\FormClientes.Designer.cs">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProductos.cs">
+    <Compile Include="Forms\FormProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProductos.Designer.cs">
+    <Compile Include="Forms\FormProductos.Designer.cs">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProveedores.cs">
+    <Compile Include="Forms\FormProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProveedores.Designer.cs">
+    <Compile Include="Forms\FormProveedores.Designer.cs">
       <DependentUpon>FormProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulario.cs">
+    <Compile Include="Forms\Formulario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulario.Designer.cs">
+    <Compile Include="Forms\Formulario.Designer.cs">
       <DependentUpon>Formulario.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormVentas.cs">
+    <Compile Include="Forms\FormVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormVentas.Designer.cs">
+    <Compile Include="Forms\FormVentas.Designer.cs">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistrosClientes.cs">
+    <Compile Include="Forms\RegistrosClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrosClientes.Designer.cs">
+    <Compile Include="Forms\RegistrosClientes.Designer.cs">
       <DependentUpon>RegistrosClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="HistorialProveedor.cs">
+    <Compile Include="Forms\HistorialProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HistorialProveedor.Designer.cs">
+    <Compile Include="Forms\HistorialProveedor.Designer.cs">
       <DependentUpon>HistorialProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaDeClientes.cs">
+    <Compile Include="Forms\ListaDeClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaDeClientes.Designer.cs">
+    <Compile Include="Forms\ListaDeClientes.Designer.cs">
       <DependentUpon>ListaDeClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaDeProductos.cs">
+    <Compile Include="Forms\ListaDeProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaDeProductos.Designer.cs">
+    <Compile Include="Forms\ListaDeProductos.Designer.cs">
       <DependentUpon>ListaDeProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaDeProveedor.cs">
+    <Compile Include="Forms\ListaDeProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaDeProveedor.Designer.cs">
+    <Compile Include="Forms\ListaDeProveedor.Designer.cs">
       <DependentUpon>ListaDeProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaProductosCompra.cs">
+    <Compile Include="Forms\ListaProductosCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaProductosCompra.Designer.cs">
+    <Compile Include="Forms\ListaProductosCompra.Designer.cs">
       <DependentUpon>ListaProductosCompra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Log in.cs">
+    <Compile Include="Forms\Log in.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Log in.Designer.cs">
+    <Compile Include="Forms\Log in.Designer.cs">
       <DependentUpon>Log in.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pagos.cs">
+    <Compile Include="Forms\Pagos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pagos.Designer.cs">
+    <Compile Include="Forms\Pagos.Designer.cs">
       <DependentUpon>Pagos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -235,58 +235,58 @@
     <EmbeddedResource Include="Controles\TextBox.resx">
       <DependentUpon>TextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editar_Perfil.resx">
+    <EmbeddedResource Include="Forms\Editar_Perfil.resx">
       <DependentUpon>Editar_Perfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCompras.resx">
+    <EmbeddedResource Include="Forms\FormCompras.resx">
       <DependentUpon>FormCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDetalleCompras.resx">
+    <EmbeddedResource Include="Forms\FormDetalleCompras.resx">
       <DependentUpon>FormDetalleCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDetallesVenta.resx">
+    <EmbeddedResource Include="Forms\FormDetallesVenta.resx">
       <DependentUpon>FormDetallesVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormReporteVentas.resx">
+    <EmbeddedResource Include="Forms\FormReporteVentas.resx">
       <DependentUpon>FormReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormClientes.resx">
+    <EmbeddedResource Include="Forms\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProductos.resx">
+    <EmbeddedResource Include="Forms\FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProveedores.resx">
+    <EmbeddedResource Include="Forms\FormProveedores.resx">
       <DependentUpon>FormProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulario.resx">
+    <EmbeddedResource Include="Forms\Formulario.resx">
       <DependentUpon>Formulario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormVentas.resx">
+    <EmbeddedResource Include="Forms\FormVentas.resx">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistrosClientes.resx">
+    <EmbeddedResource Include="Forms\RegistrosClientes.resx">
       <DependentUpon>RegistrosClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HistorialProveedor.resx">
+    <EmbeddedResource Include="Forms\HistorialProveedor.resx">
       <DependentUpon>HistorialProveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaDeClientes.resx">
+    <EmbeddedResource Include="Forms\ListaDeClientes.resx">
       <DependentUpon>ListaDeClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaDeProductos.resx">
+    <EmbeddedResource Include="Forms\ListaDeProductos.resx">
       <DependentUpon>ListaDeProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaDeProveedor.resx">
+    <EmbeddedResource Include="Forms\ListaDeProveedor.resx">
       <DependentUpon>ListaDeProveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaProductosCompra.resx">
+    <EmbeddedResource Include="Forms\ListaProductosCompra.resx">
       <DependentUpon>ListaProductosCompra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Log in.resx">
+    <EmbeddedResource Include="Forms\Log in.resx">
       <DependentUpon>Log in.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pagos.resx">
+    <EmbeddedResource Include="Forms\Pagos.resx">
       <DependentUpon>Pagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
