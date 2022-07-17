@@ -4,17 +4,17 @@
   <description asmv2:publisher="Beta" asmv2:product="Beta" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="false" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Beta.exe.manifest" size="49995">
+    <dependentAssembly dependencyType="install" codebase="Beta.exe.manifest" size="49357">
       <assemblyIdentity name="Beta.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>F/i6Pyo2msYf+d2KYwRUQflWoJ8Qd22fvGegSPc5Ngk=</dsig:DigestValue>
+        <dsig:DigestValue>SSMERIQirvamVcN4jwTAWjsmX4Kqmij2Nf9GxAZHYwY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

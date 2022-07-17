@@ -10,3 +10,15 @@ Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\obj\Debug\CapaNegocio.cspro
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\obj\Debug\CapaNegocio.csproj.CopyComplete
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\obj\Debug\Domain.dll
 Z:\kevin\Documents\C#\AppCliente-Productos-C#\Domain\obj\Debug\Domain.pdb
+D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Domain\bin\Debug\Domain.dll
+D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Domain\bin\Debug\Domain.pdb
+D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Domain\bin\Debug\Common.dll
+D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Domain\bin\Debug\DataAccess.dll
+D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Domain\bin\Debug\MySql.Data.dll
+D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Domain\bin\Debug\Common.pdb
+D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Domain\bin\Debug\DataAccess.pdb
+D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Domain\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Domain\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Domain\obj\Debug\CapaNegocio.csproj.CopyComplete
+D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Domain\obj\Debug\Domain.dll
+D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Domain\obj\Debug\Domain.pdb
