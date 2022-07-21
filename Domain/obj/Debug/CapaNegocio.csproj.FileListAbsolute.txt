@@ -34,3 +34,15 @@ D:\RepositorioGitHub\WindowsForms-Login-ServicioDeVentas\Domain\obj\Debug\CapaNe
 D:\RepositorioGitHub\WindowsForms-Login-ServicioDeVentas\Domain\obj\Debug\CapaNegocio.csproj.CopyComplete
 D:\RepositorioGitHub\WindowsForms-Login-ServicioDeVentas\Domain\obj\Debug\Domain.dll
 D:\RepositorioGitHub\WindowsForms-Login-ServicioDeVentas\Domain\obj\Debug\Domain.pdb
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Domain\bin\Debug\Domain.dll
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Domain\bin\Debug\Domain.pdb
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Domain\bin\Debug\Common.dll
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Domain\bin\Debug\DataAccess.dll
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Domain\bin\Debug\MySql.Data.dll
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Domain\bin\Debug\Common.pdb
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Domain\bin\Debug\DataAccess.pdb
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Domain\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Domain\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Domain\obj\Debug\CapaNegocio.csproj.CopyComplete
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Domain\obj\Debug\Domain.dll
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Domain\obj\Debug\Domain.pdb
