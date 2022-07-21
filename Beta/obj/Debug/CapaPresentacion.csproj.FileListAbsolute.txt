@@ -281,12 +281,6 @@ D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Beta\bin\Debug\Mic
 D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Beta\bin\Debug\Microsoft.SqlServer.Types.dll
 D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Beta\bin\Debug\DataAccess.dll
 D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Beta\bin\Debug\EnvDTE.dll
-D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Beta\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
-D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Beta\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
-D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Beta\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
-D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Beta\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
-D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Beta\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
-D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Beta\bin\Debug\Microsoft.MSXML.dll
 D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Beta\bin\Debug\Common.pdb
 D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Beta\bin\Debug\Domain.pdb
 D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Beta\bin\Debug\DataAccess.pdb

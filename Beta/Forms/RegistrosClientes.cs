@@ -26,6 +26,8 @@ namespace Beta
 
         private void HistorialDeComprasClientes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'bETADataSet.Clientes' Puede moverla o quitarla según sea necesario.
+            this.clientesTableAdapter.Fill(this.bETADataSet.Clientes);
             mostrar();
         }
 

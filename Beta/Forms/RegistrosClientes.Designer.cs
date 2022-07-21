@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,7 +39,14 @@
             this.btnVolver = new Beta.Controles.Boton();
             this.btnHistorial = new Beta.Controles.Boton();
             this.btnEliminar = new Beta.Controles.Boton();
+            this.bETADataSet = new Beta.BETADataSet();
+            this.bETADataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesTableAdapter = new Beta.BETADataSetTableAdapters.ClientesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bETADataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bETADataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -187,6 +195,25 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // bETADataSet
+            // 
+            this.bETADataSet.DataSetName = "BETADataSet";
+            this.bETADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bETADataSetBindingSource
+            // 
+            this.bETADataSetBindingSource.DataSource = this.bETADataSet;
+            this.bETADataSetBindingSource.Position = 0;
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataMember = "Clientes";
+            this.clientesBindingSource.DataSource = this.bETADataSet;
+            // 
+            // clientesTableAdapter
+            // 
+            this.clientesTableAdapter.ClearBeforeFill = true;
+            // 
             // RegistrosClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,6 +232,9 @@
             this.Text = "RegistroClientes";
             this.Load += new System.EventHandler(this.HistorialDeComprasClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bETADataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bETADataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +249,9 @@
         private Controles.Boton btnVolver;
         private Controles.Boton btnHistorial;
         private Controles.Boton btnEliminar;
+        private System.Windows.Forms.BindingSource bETADataSetBindingSource;
+        private BETADataSet bETADataSet;
+        private System.Windows.Forms.BindingSource clientesBindingSource;
+        private BETADataSetTableAdapters.ClientesTableAdapter clientesTableAdapter;
     }
 }

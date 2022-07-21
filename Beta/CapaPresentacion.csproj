@@ -107,6 +107,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BETADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BETADataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controles\Button.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -300,6 +305,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="BETADataSet.xsc">
+      <DependentUpon>BETADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BETADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BETADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BETADataSet.xss">
+      <DependentUpon>BETADataSet.xsd</DependentUpon>
+    </None>
     <None Include="Beta_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

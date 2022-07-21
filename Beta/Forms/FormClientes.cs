@@ -23,6 +23,8 @@ namespace Beta
 
         public void FormListasClientes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'bETADataSet.Clientes' Puede moverla o quitarla según sea necesario.
+            this.clientesTableAdapter.Fill(this.bETADataSet.Clientes);
             MostrarClientes();           
         }
 
@@ -128,12 +130,12 @@ namespace Beta
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 Editar = true;
-                objetoCN.id = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
-                txtnombre.Texts = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
-                txtapellido.Texts = dataGridView1.CurrentRow.Cells["Apellido"].Value.ToString();
-                txtdireccion.Texts = dataGridView1.CurrentRow.Cells["Direccion"].Value.ToString();
-                txttelefono.Texts = dataGridView1.CurrentRow.Cells["Telefono"].Value.ToString();
-                txtLocalidad.Texts = dataGridView1.CurrentRow.Cells["Localidad"].Value.ToString();
+                objetoCN.id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                txtnombre.Texts = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtapellido.Texts = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtdireccion.Texts = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                txttelefono.Texts = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                txtLocalidad.Texts = dataGridView1.CurrentRow.Cells[5].Value.ToString();
                 btnEditar.Enabled = false;
                 btnEliminar.Enabled = false;
                 dataGridView1.Enabled = false;
@@ -244,7 +246,7 @@ namespace Beta
         private void btnHistorial_Click(object sender, EventArgs e)
         {
             RegistrosClientes historial = new RegistrosClientes(ventas);
-            ventas.IDCliente = Convert.ToString(dataGridView1.CurrentRow.Cells["ID"].Value);
+            ventas.IDCliente = Convert.ToString(dataGridView1.CurrentRow.Cells[0].Value); 
             Formulario formulario = Application.OpenForms.OfType<Formulario>().SingleOrDefault();
             formulario.openChildFormInPanel(historial);
         }

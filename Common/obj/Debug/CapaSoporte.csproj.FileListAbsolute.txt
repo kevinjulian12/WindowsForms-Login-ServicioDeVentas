@@ -10,3 +10,9 @@ D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Common\obj\Debug\CapaSoporte.csp
 D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Common\obj\Debug\CapaSoporte.csproj.CoreCompileInputs.cache
 D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Common\obj\Debug\Common.dll
 D:\Trabajos\WindowsForms-Login-ServicioDeVentas\Common\obj\Debug\Common.pdb
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Common\bin\Debug\Common.dll
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Common\bin\Debug\Common.pdb
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Common\obj\Debug\CapaSoporte.csproj.AssemblyReference.cache
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Common\obj\Debug\CapaSoporte.csproj.CoreCompileInputs.cache
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Common\obj\Debug\Common.dll
+D:\RepositorioAzureDevOps\WindowsForms-Login-ServicioDeVentas\Common\obj\Debug\Common.pdb
