@@ -10,8 +10,10 @@ LoginName nvarchar (100) unique not null,
 Password nvarchar (100) not null,
 FirstName nvarchar(100) not null,
 LastName nvarchar(100) not null,
-Position nvarchar (100) not null,
-Email nvarchar(150)not null
+Position nvarchar (100) null,
+Email nvarchar(150)not null,
+DateoOfBirth date NULL,
+GENDER varchar(1) NULL,
 )
 go
 --insert into Users values ('admin','admin','Jackson','Collins','Administrator','Support@SystemAll.biz')
@@ -156,7 +158,12 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
+create or alter procedure RestarStock
+@stock int,
+@id int
+as
+Update Productos set Stock=Stock-@stock where Id=@id
+go
 --select Nombre,Marca,Descripcion,PrecioUnitario,Cantidad,SubTotal from ventasitems join productos on IDProducto=productos.ID where IDVenta=1
 --
 --
@@ -178,4 +185,4 @@ GO
 -- join ventasitems on ve.ID=ventasitems.IDVenta
 --
 
- 
+ Select* from Productos

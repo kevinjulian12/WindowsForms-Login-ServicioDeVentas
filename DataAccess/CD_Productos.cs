@@ -82,8 +82,8 @@ namespace DataAccess
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "RestarStock";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@idpro", id);
-            comando.Parameters.AddWithValue("@cant", cantidad);
+            comando.Parameters.AddWithValue("@id", id);
+            comando.Parameters.AddWithValue("@stock", cantidad);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();

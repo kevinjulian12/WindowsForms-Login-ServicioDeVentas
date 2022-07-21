@@ -144,6 +144,7 @@ namespace Beta
             txtNombre.Clear();
             txtDireccion.Clear();
             txtApellido.Clear();
+            labelTotal.Text = "0";
         }
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
@@ -157,5 +158,6 @@ namespace Beta
             ListaDeProductos listaDeProductos = new ListaDeProductos();
             listaDeProductos.ShowDialog();
         }
+
     }
 }
